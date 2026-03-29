@@ -1,0 +1,2845 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dampak Berkelanjutan - Manfaat MBG</title>
+    <meta name="description" content="Analisis dampak berkelanjutan Program Makan Bergizi Gratis (MBG): dampak kesehatan, ekonomi, pendidikan, dan sosial bagi masyarakat Indonesia. Data berbasis riset dan studi ilmiah.">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Dampak Berkelanjutan MBG — Analisis Komprehensif">
+    <meta property="og:description" content="Dampak MBG pada gizi anak, ekonomi lokal, ketahanan pangan, dan SDGs. Didukung data dari 27.000+ SPPG seluruh Indonesia.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://manfaat-mbg.vercel.app/dampak-berkelanjutan">
+    <meta property="og:image" content="https://manfaat-mbg.vercel.app/og-image.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Dampak Berkelanjutan MBG — Analisis Komprehensif">
+    <meta name="twitter:description" content="Dampak MBG pada gizi anak, ekonomi lokal, ketahanan pangan, dan SDGs.">
+    <link rel="canonical" href="https://manfaat-mbg.vercel.app/dampak-berkelanjutan">
+    <link rel="icon" href="/favicon.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Playfair+Display:wght@700;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+    <script defer src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg-warm: #F4F8FB;
+            --bg-dark: #0F2F4D;
+            --bg-card: #FFFFFF;
+            --primary: #008DD0;
+            --primary-light: #33A8E0;
+            --accent-red: #E63946;
+            --accent-gold: #F5A623;
+            --accent-green: #2D9B6E;
+            --accent-pink: #E56B6F;
+            --accent-orange: #F4845F;
+            --text-dark: #0F2F4D;
+            --text-muted: #6B8299;
+            --border: #E1EAF0;
+            --border-light: #EDF2F7;
+            --glass-bg: rgba(255, 255, 255, 0.75);
+            --glass-border: rgba(255, 255, 255, 0.85);
+            --glass-shadow: 0 8px 32px rgba(0, 141, 208, 0.06);
+            --glass-blur: blur(18px);
+            --radius-lg: 20px;
+            --radius-md: 14px;
+            --radius-sm: 10px;
+            --shadow-sm: 0 2px 8px rgba(0, 141, 208, 0.05);
+            --shadow-md: 0 8px 28px rgba(0, 141, 208, 0.07);
+            --shadow-lg: 0 16px 48px rgba(0, 141, 208, 0.10);
+            --shadow-glow: 0 0 0 3px rgba(0, 141, 208, 0.10);
+            --transition-smooth: 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+        /* ===== DARK MODE ===== */
+        [data-theme="dark"] {
+            --bg-warm: #0f1419;
+            --bg-dark: #1a1f2e;
+            --bg-card: #192029;
+            --text-dark: #e2e8f0;
+            --text-muted: #94a3b8;
+            --border: #2d3748;
+            --border-light: #1e293b;
+            --glass-bg: rgba(15, 20, 25, 0.9);
+            --glass-border: rgba(45, 55, 72, 0.6);
+            --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+            --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
+            --shadow-md: 0 8px 28px rgba(0, 0, 0, 0.35);
+            --shadow-lg: 0 16px 48px rgba(0, 0, 0, 0.4);
+            --shadow-glow: 0 0 0 3px rgba(56, 189, 248, 0.15);
+        }
+        [data-theme="dark"] body { background: #0f1419; color: #e2e8f0; }
+        [data-theme="dark"] .header-container {
+            background: rgba(15, 20, 25, 0.92) !important;
+            border: 1px solid rgba(56, 189, 248, 0.1);
+            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
+        }
+        [data-theme="dark"] .nav-link { color: #94a3b8 !important; }
+        [data-theme="dark"] .nav-link.active,
+        [data-theme="dark"] .nav-link:hover { color: #f1f5f9 !important; }
+        [data-theme="dark"] .nav-link.active { background: rgba(0, 141, 208, 0.2) !important; box-shadow: 0 1px 4px rgba(0, 141, 208, 0.15) !important; }
+        [data-theme="dark"] .logo-text { color: #f1f5f9 !important; }
+        [data-theme="dark"] .logo-text small { color: #64748b !important; }
+        [data-theme="dark"] .hero {
+            background: linear-gradient(135deg, #0f1419 0%, #0c4a6e 100%) !important;
+        }
+        [data-theme="dark"] section { background: #0f1419 !important; }
+        [data-theme="dark"] section h2,
+        [data-theme="dark"] section h3 { color: #e2e8f0 !important; }
+        [data-theme="dark"] section p { color: #94a3b8 !important; }
+        [data-theme="dark"] .card,
+        [data-theme="dark"] .insight-card,
+        [data-theme="dark"] .benefit-card,
+        [data-theme="dark"] .cba-card,
+        [data-theme="dark"] .metric-card,
+        [data-theme="dark"] .stat-card {
+            background: #192029 !important;
+            border-color: #2d3748 !important;
+            color: #e2e8f0 !important;
+        }
+        [data-theme="dark"] .card h3,
+        [data-theme="dark"] .card h4,
+        [data-theme="dark"] .stat-card h3 { color: #e2e8f0 !important; }
+        [data-theme="dark"] .card p,
+        [data-theme="dark"] .stat-card p { color: #94a3b8 !important; }
+        [data-theme="dark"] table { color: #e2e8f0 !important; }
+        [data-theme="dark"] table th {
+            background: #1e293b !important;
+            color: #94a3b8 !important;
+            border-color: #334155 !important;
+        }
+        [data-theme="dark"] table td { border-color: #2d3748 !important; }
+        [data-theme="dark"] table tr:nth-child(even) td { background: rgba(30,41,59,0.3) !important; }
+        [data-theme="dark"] table tr:hover td { background: rgba(56,189,248,0.05) !important; }
+        [data-theme="dark"] footer {
+            background: #0f1419 !important;
+            color: #64748b !important;
+            border-top: 1px solid #2d3748 !important;
+        }
+        [data-theme="dark"] footer a { color: #38bdf8 !important; }
+        [data-theme="dark"] .lang-btn { color: #64748b !important; opacity: 0.5; }
+        [data-theme="dark"] .lang-btn.active {
+            color: #e2e8f0 !important;
+            border-color: #38bdf8 !important;
+            opacity: 1;
+            box-shadow: 0 1px 6px rgba(56, 189, 248, 0.3);
+        }
+        [data-theme="dark"] .lang-toggle-group {
+            background: rgba(56, 189, 248, 0.1) !important;
+            border-color: rgba(56, 189, 248, 0.15) !important;
+        }
+        [data-theme="dark"] ::-webkit-scrollbar { width: 8px; }
+        [data-theme="dark"] ::-webkit-scrollbar-track { background: #0f1419; }
+        [data-theme="dark"] ::-webkit-scrollbar-thumb { background: #334155; border-radius: 4px; }
+
+        /* Dark mode toggle button */
+        .dark-mode-btn {
+            width: 34px; height: 34px; padding: 0;
+            border: 2px solid var(--border); border-radius: 50%;
+            cursor: pointer; transition: all 0.3s ease;
+            background: transparent; display: flex;
+            align-items: center; justify-content: center;
+            font-size: 15px; opacity: 0.6;
+        }
+        .dark-mode-btn:hover { opacity: 1; border-color: var(--primary); transform: rotate(15deg); }
+        [data-theme="dark"] .dark-mode-btn {
+            opacity: 1; border-color: #fbbf24; color: #fbbf24;
+            box-shadow: 0 0 12px rgba(251, 191, 36, 0.2);
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+            background-color: var(--bg-warm);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Instrument Serif', 'Playfair Display', Georgia, serif;
+            font-weight: 400;
+            letter-spacing: -0.5px;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* HEADER */
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 200;
+            padding: 14px 24px;
+            background: transparent;
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 10px 28px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 24px;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-radius: 50px;
+            box-shadow: 0 2px 24px rgba(0, 0, 0, 0.06), 0 0 0 1px rgba(0, 141, 208, 0.06);
+        }
+
+        .logo, .brand {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            white-space: nowrap;
+            text-decoration: none;
+            color: var(--text-dark);
+            flex-shrink: 0;
+        }
+        .logo-icon {
+            width: 36px; height: 36px;
+            background: linear-gradient(135deg, #008DD0, #006FA6);
+            border-radius: 10px;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 18px; color: white;
+        }
+        .logo-text {
+            font-family: 'Plus Jakarta Sans', -apple-system, sans-serif;
+            font-size: 16px; font-weight: 800; letter-spacing: -0.3px;
+            color: var(--text-dark); line-height: 1.1;
+        }
+        .logo-text small {
+            display: block; font-size: 9.5px; font-weight: 500;
+            color: #6B8299; letter-spacing: 0.5px; text-transform: uppercase;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .nav-link {
+            padding: 7px 16px;
+            border-radius: 24px;
+            border: none;
+            background: transparent;
+            color: #4A6275;
+            font-family: 'Plus Jakarta Sans', -apple-system, sans-serif;
+            font-weight: 500;
+            font-size: 13.5px;
+            cursor: pointer;
+            transition: all 0.25s ease;
+            text-decoration: none;
+            white-space: nowrap;
+        }
+
+        .nav-link:hover {
+            background: rgba(0, 141, 208, 0.06);
+            color: var(--primary);
+        }
+
+        .nav-link.active {
+            color: var(--primary);
+            font-weight: 600;
+            background: rgba(0, 141, 208, 0.1);
+            border-radius: 10px;
+            box-shadow: 0 1px 4px rgba(0, 141, 208, 0.08);
+        }
+
+        .nav-cta {
+            padding: 8px 20px;
+            border-radius: 24px; border: none;
+            background: var(--primary); color: white;
+            font-family: 'Plus Jakarta Sans', -apple-system, sans-serif;
+            font-weight: 600; font-size: 13px;
+            cursor: pointer; transition: all 0.25s ease;
+            text-decoration: none; white-space: nowrap;
+            box-shadow: 0 2px 10px rgba(0, 141, 208, 0.25);
+            display: inline-flex; align-items: center; gap: 6px;
+        }
+        .nav-cta:hover { background: #0079B8; box-shadow: 0 4px 16px rgba(0, 141, 208, 0.35); transform: translateY(-1px); }
+
+        .header-right {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            flex-shrink: 0;
+        }
+
+        .lang-toggle-group {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            background: rgba(0, 141, 208, 0.06);
+            border-radius: 24px;
+            padding: 3px;
+            border: 1px solid rgba(0, 141, 208, 0.1);
+        }
+        .lang-btn {
+            height: 34px;
+            padding: 0 10px 0 4px;
+            border: 2px solid transparent;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.25s;
+            background: transparent;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            font-size: 12px;
+            font-weight: 600;
+            color: #555;
+            white-space: nowrap;
+            opacity: 0.5;
+        }
+        .lang-btn .flag-circle {
+            width: 26px;
+            height: 26px;
+            border-radius: 50%;
+            background-size: cover;
+            background-position: center;
+            flex-shrink: 0;
+        }
+        .lang-btn.active {
+            border-color: var(--primary);
+            opacity: 1;
+            box-shadow: 0 1px 6px rgba(0,141,208,0.3);
+        }
+        .lang-btn:hover:not(.active) {
+            opacity: 0.8;
+            border-color: rgba(0, 141, 208, 0.2);
+        }
+
+        .lang-btn .flag-circle.flag-id {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3CclipPath id='fc1'%3E%3Ccircle cx='50' cy='50' r='50'/%3E%3C/clipPath%3E%3Cg clip-path='url(%23fc1)'%3E%3Crect width='100' height='50' fill='%23CE1126'/%3E%3Crect y='50' width='100' height='50' fill='%23fff'/%3E%3C/g%3E%3C/svg%3E");
+        }
+        .lang-btn .flag-circle.flag-en {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3CclipPath id='fc2'%3E%3Ccircle cx='50' cy='50' r='50'/%3E%3C/clipPath%3E%3Cg clip-path='url(%23fc2)'%3E%3Crect width='100' height='100' fill='%23012169'/%3E%3Cpath d='M0,0 L100,100 M100,0 L0,100' stroke='%23fff' stroke-width='14'/%3E%3Cpath d='M0,0 L100,100 M100,0 L0,100' stroke='%23C8102E' stroke-width='8'/%3E%3Cpath d='M50,0 V100 M0,50 H100' stroke='%23fff' stroke-width='18'/%3E%3Cpath d='M50,0 V100 M0,50 H100' stroke='%23C8102E' stroke-width='10'/%3E%3C/g%3E%3C/svg%3E");
+        }
+
+        /* HERO SECTION */
+        .hero {
+            background: linear-gradient(135deg, #0F2F4D 0%, #008DD0 100%);
+            color: white;
+            padding: 80px 24px;
+            margin-top: 0;
+            text-align: center;
+        }
+
+        .hero-container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            letter-spacing: -0.5px;
+        }
+
+        .hero p {
+            font-size: 16px;
+            color: rgba(255, 255, 255, 0.8);
+            font-weight: 500;
+            letter-spacing: 0.5px;
+        }
+
+        /* SECTION STYLING */
+        section {
+            padding: 80px 24px;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 40px;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 16px;
+            letter-spacing: -0.5px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .section-title.with-accent {
+            position: relative;
+            padding-left: 1rem;
+        }
+
+        .section-title.with-accent::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: var(--accent-gold);
+            border-radius: 2px;
+        }
+
+        .section-subtitle {
+            font-size: 16px;
+            color: var(--text-muted);
+            margin-bottom: 48px;
+        }
+
+        /* CBA SECTION */
+        .cba-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 32px;
+        }
+
+        .cba-icon {
+            font-size: 32px;
+        }
+
+        .cba-title {
+            font-size: 16px;
+            color: var(--accent-red);
+            font-weight: 600;
+            letter-spacing: 0.05em;
+        }
+
+        .cba-content {
+            background: var(--bg-card);
+            padding: 28px;
+            border-radius: 16px;
+            margin-bottom: 32px;
+            border: 1px solid var(--border);
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+        }
+
+        .cba-content p {
+            color: var(--text-dark);
+            margin-bottom: 24px;
+            line-height: 1.7;
+        }
+
+        .cba-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+            margin-bottom: 32px;
+        }
+
+        .cba-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            padding: 28px;
+            border-radius: 16px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+            transition: all 0.3s ease;
+        }
+
+        .cba-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+        }
+
+        .cba-card h3 {
+            color: var(--primary);
+            margin-bottom: 16px;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .cba-card ul {
+            list-style: none;
+        }
+
+        .cba-card li {
+            margin-bottom: 12px;
+            color: var(--text-muted);
+            padding-left: 24px;
+            position: relative;
+            font-size: 14px;
+        }
+
+        .cba-card li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: var(--primary);
+            font-weight: bold;
+        }
+
+        .cba-warning {
+            background: rgba(230, 57, 70, 0.06);
+            border-left: 4px solid var(--accent-red);
+            padding: 20px;
+            border-radius: 12px;
+            margin-bottom: 32px;
+            color: var(--text-dark);
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .cba-details {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+        }
+
+        .cba-detail-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            padding: 28px;
+            border-radius: 16px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+        }
+
+        .cba-detail-card h4 {
+            color: var(--text-dark);
+            margin-bottom: 12px;
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        .cba-detail-card p {
+            color: var(--text-muted);
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        /* BANNER SECTIONS */
+        .sroi-banner {
+            background: linear-gradient(135deg, var(--accent-red) 0%, #F77F88 100%);
+            color: white;
+            padding: 48px 32px;
+            border-radius: 20px;
+            text-align: center;
+            margin: 48px 0;
+            box-shadow: 0 8px 32px rgba(230, 57, 70, 0.2);
+        }
+
+        .sroi-banner h2 {
+            font-size: 36px;
+            margin-bottom: 12px;
+            font-weight: 700;
+        }
+
+        .sroi-banner p {
+            font-size: 16px;
+            opacity: 0.95;
+        }
+
+        .economic-banner {
+            background: linear-gradient(135deg, var(--accent-green) 0%, #2D6A4F 100%);
+            color: white;
+            padding: 48px 32px;
+            border-radius: 20px;
+            margin: 48px 0;
+            box-shadow: 0 8px 32px rgba(45, 106, 79, 0.2);
+        }
+
+        .economic-banner h2 {
+            font-size: 32px;
+            margin-bottom: 12px;
+            font-weight: 700;
+        }
+
+        .economic-banner p {
+            font-size: 16px;
+            opacity: 0.9;
+        }
+
+        /* ECONOMIC MODEL */
+        .economic-model-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 24px;
+            margin-top: 32px;
+        }
+
+        .model-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            padding: 28px;
+            border-radius: 16px;
+            transition: all 0.3s ease;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+        }
+
+        .model-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+        }
+
+        .model-card h3 {
+            color: var(--text-dark);
+            margin-bottom: 16px;
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 1.4;
+        }
+
+        .model-card .metric {
+            background: linear-gradient(135deg, var(--accent-green) 0%, #2D6A4F 100%);
+            color: white;
+            padding: 16px;
+            border-radius: 12px;
+            margin-bottom: 16px;
+            font-weight: 700;
+            font-size: 16px;
+            text-align: center;
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        .model-card ul {
+            list-style: none;
+        }
+
+        .model-card li {
+            margin-bottom: 8px;
+            color: var(--text-muted);
+            padding-left: 20px;
+            position: relative;
+            font-size: 13px;
+        }
+
+        .model-card li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: var(--accent-green);
+            font-weight: bold;
+        }
+
+        /* SDG SECTION — new design matching ffi-soe-unit.vercel.app */
+        .sdg-layout {
+            display: grid;
+            grid-template-columns: 280px 1fr;
+            gap: 20px;
+            align-items: start;
+        }
+        .sdg-intro-panel {
+            background: #fff;
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 32px 24px;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            position: sticky;
+            top: 100px;
+        }
+        .sdg-intro-icon {
+            width: 48px; height: 48px;
+            background: #fee2e2;
+            border-radius: 12px;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 22px;
+        }
+        .sdg-intro-panel h2 {
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--text-dark);
+            line-height: 1.2;
+        }
+        .sdg-intro-panel p {
+            font-size: 13px;
+            color: var(--text-muted);
+            line-height: 1.6;
+        }
+        .sdg-cards-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 14px;
+        }
+        .sdg-card-new {
+            position: relative;
+            background: #fff;
+            border: 1px solid #e5e7eb;
+            border-radius: 14px;
+            overflow: hidden;
+            transition: all 0.25s ease;
+        }
+        .sdg-card-new:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+        }
+        .sdg-card-bg {
+            position: absolute;
+            inset: 0;
+            background-size: cover;
+            background-position: center;
+            opacity: 0.08;
+        }
+        .sdg-card-content {
+            position: relative;
+            z-index: 1;
+            padding: 16px;
+        }
+        .sdg-card-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 10px;
+        }
+        .sdg-badge {
+            width: 44px; height: 44px;
+            border-radius: 10px;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 20px; font-weight: 900; color: white;
+            flex-shrink: 0;
+        }
+        .sdg-badge-1 { background: #E5243B; }
+        .sdg-badge-2 { background: #DDA63A; }
+        .sdg-badge-3 { background: #4C9F38; }
+        .sdg-badge-4 { background: #C5192D; }
+        .sdg-badge-5 { background: #FF3A21; }
+        .sdg-badge-8 { background: #A21942; }
+        .sdg-badge-12 { background: #BF8B2E; }
+        .sdg-tujuan-tag {
+            font-size: 9px; font-weight: 700;
+            color: #9ca3af; letter-spacing: 0.8px;
+            text-transform: uppercase;
+            padding-top: 2px;
+        }
+        .sdg-card-title {
+            font-size: 14px; font-weight: 700;
+            color: #111827;
+            margin-bottom: 4px;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+        .sdg-card-metric {
+            font-size: 15px; font-weight: 800;
+            color: #E63946;
+            margin-bottom: 6px;
+            line-height: 1.2;
+        }
+        .sdg-card-desc {
+            font-size: 11px;
+            color: #6b7280;
+            line-height: 1.4;
+        }
+        [data-theme="dark"] .sdg-intro-panel {
+            background: #192029 !important;
+            border-color: #2d3748 !important;
+        }
+        [data-theme="dark"] .sdg-intro-panel h2 { color: #e2e8f0 !important; }
+        [data-theme="dark"] .sdg-intro-panel p { color: #94a3b8 !important; }
+        [data-theme="dark"] .sdg-card-new {
+            background: #192029 !important;
+            border-color: #2d3748 !important;
+        }
+        [data-theme="dark"] .sdg-card-title { color: #e2e8f0 !important; }
+        [data-theme="dark"] .sdg-card-desc { color: #94a3b8 !important; }
+
+        /* SROI ANALYSIS */
+        .sroi-section {
+            background: var(--bg-card);
+            padding: 48px;
+            border-radius: 20px;
+            margin: 32px 0;
+            border: 1px solid var(--border);
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+        }
+
+        .sroi-title {
+            background: linear-gradient(135deg, var(--accent-red) 0%, #F77F88 100%);
+            color: white;
+            padding: 32px;
+            border-radius: 16px;
+            text-align: center;
+            margin-bottom: 32px;
+        }
+
+        .sroi-title h2 {
+            font-size: 28px;
+            margin-bottom: 8px;
+            font-weight: 700;
+        }
+
+        .sroi-title p {
+            font-size: 16px;
+        }
+
+        .sroi-summary {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 24px;
+            margin-bottom: 32px;
+        }
+
+        .sroi-card {
+            background: var(--bg-warm);
+            border: 1px solid var(--border);
+            padding: 28px;
+            border-radius: 16px;
+            text-align: center;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+        }
+
+        .sroi-card .label {
+            color: var(--text-muted);
+            font-size: 12px;
+            margin-bottom: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .sroi-card .value {
+            color: var(--accent-red);
+            font-size: 28px;
+            font-weight: 700;
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        .sroi-breakdown {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 32px;
+        }
+
+        .breakdown-section h3 {
+            color: var(--text-dark);
+            margin-bottom: 24px;
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        .breakdown-item {
+            margin-bottom: 24px;
+        }
+
+        .breakdown-label {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+            font-size: 13px;
+            color: var(--text-muted);
+            font-weight: 600;
+        }
+
+        .breakdown-bar {
+            background: var(--border);
+            height: 8px;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .breakdown-fill {
+            background: linear-gradient(90deg, var(--accent-red), var(--accent-orange));
+            height: 100%;
+            border-radius: 4px;
+            transition: width 1.5s ease-out;
+        }
+
+        /* COMMODITY TABLE */
+        .commodity-table {
+            overflow-x: auto;
+            margin-top: 32px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+        }
+
+        thead {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            color: white;
+        }
+
+        th {
+            padding: 16px;
+            text-align: left;
+            font-weight: 600;
+            font-size: 13px;
+            border: none;
+            text-transform: uppercase;
+        }
+
+        td {
+            padding: 14px 16px;
+            border-bottom: 1px solid var(--border-light);
+            color: var(--text-dark);
+            font-size: 14px;
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        tbody tr:hover {
+            background: var(--bg-warm);
+        }
+
+        .commodity-icon {
+            margin-right: 8px;
+        }
+
+        .total-row {
+            background: rgba(45, 106, 79, 0.08);
+            font-weight: 700;
+            color: var(--accent-green);
+        }
+
+        /* THEORY OF CHANGE */
+        .toc-container {
+            margin-top: 32px;
+        }
+
+        .toc-flow {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 16px;
+            margin-top: 32px;
+        }
+
+        .toc-step {
+            padding: 24px;
+            border-radius: 16px;
+            text-align: center;
+            position: relative;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+        }
+
+        .toc-step::after {
+            content: '→';
+            position: absolute;
+            right: -24px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 20px;
+            color: var(--border);
+            font-weight: bold;
+        }
+
+        .toc-step:last-child::after {
+            display: none;
+        }
+
+        .toc-step.activities {
+            background: linear-gradient(135deg, #FEF3C7 0%, #FCD34D 100%);
+            color: #78350F;
+        }
+
+        .toc-step.output {
+            background: linear-gradient(135deg, #D1FAE5 0%, #A7F3D0 100%);
+            color: #064E3B;
+        }
+
+        .toc-step.outcome {
+            background: linear-gradient(135deg, #CCFBF1 0%, #99F6E4 100%);
+            color: #134E4A;
+        }
+
+        .toc-step.impact {
+            background: linear-gradient(135deg, #FBCFE8 0%, #F8BAD6 100%);
+            color: #831843;
+        }
+
+        .toc-step h3 {
+            font-size: 14px;
+            margin-bottom: 12px;
+            font-weight: 700;
+        }
+
+        .toc-step ul {
+            list-style: none;
+            text-align: left;
+            font-size: 12px;
+            line-height: 1.5;
+        }
+
+        .toc-step li {
+            margin-bottom: 8px;
+            padding-left: 16px;
+            position: relative;
+        }
+
+        .toc-step li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+
+        .toc-caption {
+            text-align: center;
+            margin-top: 32px;
+            color: var(--text-muted);
+            font-size: 13px;
+            font-style: italic;
+        }
+
+        /* NON-QUANTITATIVE BENEFITS */
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 24px;
+            margin-top: 32px;
+        }
+
+        .benefit-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            padding: 28px;
+            border-radius: 16px;
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+            border-color: var(--primary);
+        }
+
+        .benefit-icon {
+            font-size: 32px;
+            margin-bottom: 16px;
+        }
+
+        .benefit-card h3 {
+            color: var(--primary);
+            margin-bottom: 12px;
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        .benefit-card p {
+            color: var(--text-muted);
+            font-size: 14px;
+            line-height: 1.6;
+            flex-grow: 1;
+        }
+
+        /* FOOTER */
+        footer {
+            background: var(--bg-dark);
+            color: white;
+            border-top: 1px solid var(--border);
+            padding: 48px 24px;
+            margin-top: 80px;
+        }
+
+        .footer-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 32px;
+            margin-bottom: 32px;
+        }
+
+        .footer-section h4 {
+            color: var(--accent-gold);
+            margin-bottom: 16px;
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section li {
+            margin-bottom: 8px;
+        }
+
+        .footer-section a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.3s;
+        }
+
+        .footer-section a:hover {
+            color: var(--accent-gold);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 32px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 13px;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            header { padding: 8px 12px; }
+            .header-container {
+                gap: 8px;
+                padding: 8px 16px;
+                border-radius: 30px;
+            }
+            .logo-text { font-size: 14px; }
+            .logo-text small { display: none; }
+            .logo-icon { width: 30px; height: 30px; font-size: 15px; }
+
+            nav .nav-link { display: none; }
+            .nav-cta { font-size: 12px; padding: 6px 14px; }
+
+            .hero {
+                padding: 48px 16px;
+            }
+
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            section {
+                padding: 48px 16px;
+            }
+
+            .container {
+                padding: 0 16px;
+            }
+
+            .section-title {
+                font-size: 28px;
+            }
+
+            .cba-cards,
+            .economic-model-cards,
+            .sdg-layout,
+            .sdg-cards-grid,
+            .sroi-summary,
+            .sroi-breakdown,
+            .benefits-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .toc-flow {
+                grid-template-columns: 1fr;
+            }
+
+            .toc-step::after {
+                display: none;
+            }
+
+            table {
+                font-size: 12px;
+            }
+
+            th, td {
+                padding: 12px 8px;
+            }
+
+            .sroi-section {
+                padding: 24px;
+            }
+
+            .sroi-title {
+                padding: 24px;
+            }
+
+            .sroi-title h2 {
+                font-size: 20px;
+            }
+
+            .sroi-banner h2 {
+                font-size: 24px;
+            }
+
+            .economic-banner h2 {
+                font-size: 24px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header-container {
+                padding: 12px;
+                gap: 8px;
+            }
+
+            nav {
+                gap: 8px;
+                font-size: 12px;
+            }
+
+            .hero {
+                padding: 32px 12px;
+            }
+
+            .hero h1 {
+                font-size: 24px;
+            }
+
+            .hero p {
+                font-size: 13px;
+            }
+
+            .section-title {
+                font-size: 20px;
+            }
+
+            .container {
+                padding: 0 12px;
+            }
+
+            section {
+                padding: 32px 12px;
+            }
+
+            .sroi-banner,
+            .economic-banner {
+                padding: 24px 16px;
+            }
+
+            .cba-content,
+            .sroi-section {
+                padding: 16px;
+            }
+
+            .toc-step {
+                padding: 16px;
+            }
+
+            .footer-container {
+                gap: 16px;
+            }
+
+            .hero-partners {
+                margin-top: 32px;
+            }
+
+            .partners-label {
+                font-size: 12px;
+            }
+
+            .partners-row {
+                gap: 12px;
+            }
+
+            .partner-badge {
+                width: 60px;
+                height: 60px;
+                font-size: 11px;
+            }
+
+            .hero-stats {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 12px;
+                margin-top: 24px;
+            }
+
+            .stat-card {
+                padding: 16px;
+            }
+
+            .stat-value {
+                font-size: 18px;
+            }
+
+            .stat-label {
+                font-size: 11px;
+            }
+
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .collab-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-stats {
+                grid-template-columns: 1fr;
+            }
+
+            .partners-row {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .partner-badge {
+                width: 56px;
+                height: 56px;
+            }
+
+            .stat-card {
+                padding: 12px;
+            }
+
+            .stat-value {
+                font-size: 16px;
+            }
+
+            .stat-label {
+                font-size: 10px;
+            }
+        }
+
+        /* ===== HERO PARTNERS ===== */
+        .hero-partners {
+            margin-top: 48px;
+            padding-top: 48px;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .partners-label {
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .partners-row {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 24px;
+            flex-wrap: wrap;
+        }
+
+        .partner-badge {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 13px;
+            color: white;
+            text-align: center;
+            padding: 12px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+            transition: all 0.3s ease;
+        }
+
+        .partner-badge:hover {
+            transform: translateY(-4px);
+            background: rgba(255, 255, 255, 0.25);
+            border-color: rgba(255, 255, 255, 0.5);
+            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2);
+        }
+
+        /* ===== HERO STATS ===== */
+        .hero-stats {
+            margin-top: 48px;
+            padding-top: 48px;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 20px;
+        }
+
+        .stat-card {
+            background: rgba(255, 255, 255, 0.12);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 16px;
+            padding: 24px;
+            text-align: center;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+        }
+
+        .stat-card:hover {
+            background: rgba(255, 255, 255, 0.18);
+            border-color: rgba(255, 255, 255, 0.4);
+            transform: translateY(-4px);
+            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
+        }
+
+        .stat-value {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 24px;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        .stat-label {
+            font-size: 12px;
+            font-weight: 500;
+            color: rgba(255, 255, 255, 0.8);
+            letter-spacing: 0.3px;
+            text-transform: uppercase;
+        }
+
+        /* ===== TESTIMONIALS SECTION ===== */
+        .collab-section {
+            background: var(--bg-warm);
+        }
+
+        [data-theme="dark"] .collab-section {
+            background: #0f1419;
+        }
+
+        .collab-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 28px;
+            margin-top: 48px;
+        }
+
+        .collab-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 28px;
+            box-shadow: 0 2px 8px rgba(0, 141, 208, 0.05);
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .collab-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 8px 24px rgba(0, 141, 208, 0.12);
+            border-color: rgba(0, 141, 208, 0.2);
+        }
+
+        .collab-card-title {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 12px;
+        }
+
+        .collab-card-desc {
+            font-size: 14px;
+            color: var(--text-muted);
+            line-height: 1.6;
+            flex-grow: 1;
+        }
+
+        .collab-card-badge {
+            margin-top: 16px;
+            padding-top: 16px;
+            border-top: 1px solid var(--border);
+            font-size: 11px;
+            color: var(--primary);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.3px;
+        }
+
+        [data-theme="dark"] .collab-card {
+            background: #192029;
+            border-color: #2d3748;
+        }
+
+        [data-theme="dark"] .collab-card-title {
+            color: #38bdf8;
+        }
+
+        [data-theme="dark"] .collab-card-desc {
+            color: #94a3b8;
+        }
+
+        [data-theme="dark"] .collab-card-badge {
+            color: #38bdf8;
+            border-top-color: #2d3748;
+        }
+
+        /* ===== ENHANCED FOOTER ===== */
+        footer {
+            background: var(--bg-warm);
+            border-top: 1px solid var(--border);
+            padding: 60px 24px 32px;
+        }
+
+        [data-theme="dark"] footer {
+            background: #0f1419;
+            border-top-color: #2d3748;
+        }
+
+        .footer-container {
+            max-width: 1400px;
+            margin: 0 auto 40px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+        }
+
+        .footer-section {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .footer-section h4 {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--text-dark);
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        [data-theme="dark"] .footer-section h4 {
+            color: #e2e8f0;
+        }
+
+        .footer-section ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .footer-section a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 14px;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .footer-section a:hover {
+            color: var(--primary);
+            transform: translateX(2px);
+        }
+
+        [data-theme="dark"] .footer-section a {
+            color: #94a3b8;
+        }
+
+        [data-theme="dark"] .footer-section a:hover {
+            color: #38bdf8;
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 12px;
+            margin-top: 12px;
+        }
+
+        .social-link {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(0, 141, 208, 0.1);
+            border: 1px solid rgba(0, 141, 208, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary);
+            text-decoration: none;
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+
+        .social-link:hover {
+            background: var(--primary);
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 4px 12px rgba(0, 141, 208, 0.2);
+        }
+
+        [data-theme="dark"] .social-link {
+            background: rgba(56, 189, 248, 0.1);
+            border-color: rgba(56, 189, 248, 0.2);
+            color: #38bdf8;
+        }
+
+        [data-theme="dark"] .social-link:hover {
+            background: #38bdf8;
+            color: #0f1419;
+        }
+
+        .newsletter-form {
+            display: flex;
+            gap: 8px;
+            margin-top: 16px;
+        }
+
+        .newsletter-input {
+            flex: 1;
+            padding: 10px 16px;
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            background: var(--bg-card);
+            color: var(--text-dark);
+            font-size: 13px;
+            transition: all 0.3s ease;
+        }
+
+        .newsletter-input:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(0, 141, 208, 0.1);
+        }
+
+        .newsletter-btn {
+            padding: 10px 20px;
+            background: var(--primary);
+            color: white;
+            border: none;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: 13px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            white-space: nowrap;
+        }
+
+        .newsletter-btn:hover {
+            background: #0079B8;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 141, 208, 0.2);
+        }
+
+        [data-theme="dark"] .newsletter-input {
+            background: #192029;
+            border-color: #2d3748;
+            color: #e2e8f0;
+        }
+
+        [data-theme="dark"] .newsletter-input:focus {
+            border-color: #38bdf8;
+            box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.1);
+        }
+
+        [data-theme="dark"] .newsletter-btn {
+            background: #38bdf8;
+            color: #0f1419;
+        }
+
+        [data-theme="dark"] .newsletter-btn:hover {
+            background: #0ea5e9;
+        }
+
+        .footer-bottom {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding-top: 24px;
+            border-top: 1px solid var(--border);
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 13px;
+        }
+
+        [data-theme="dark"] .footer-bottom {
+            border-top-color: #2d3748;
+            color: #64748b;
+        }
+
+        /* ===== RESPONSIVE HERO ELEMENTS ===== */
+        @media (max-width: 768px) {
+            .hero-partners {
+                margin-top: 32px;
+                padding-top: 32px;
+            }
+
+            .partners-row {
+                gap: 16px;
+            }
+
+            .partner-badge {
+                width: 70px;
+                height: 70px;
+                font-size: 12px;
+            }
+
+            .hero-stats {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 16px;
+                margin-top: 32px;
+            }
+
+            .stat-card {
+                padding: 20px;
+            }
+
+            .stat-value {
+                font-size: 20px;
+            }
+
+            .stat-label {
+                font-size: 11px;
+            }
+
+            .testimonials-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+            }
+
+            .collab-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+            }
+
+            .footer-container {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 32px;
+            }
+        }
+        }
+    </style>
+</head>
+<body>
+    <a href="#main-content" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;z-index:9999;" onfocus="this.style.cssText='position:fixed;top:8px;left:8px;width:auto;height:auto;padding:10px 16px;background:#008DD0;color:#fff;font-weight:700;border-radius:8px;z-index:9999;overflow:visible;';" onblur="this.style.cssText='position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;z-index:9999;';">Lewati ke konten utama</a>
+    <!-- HEADER -->
+    <header>
+        <div class="header-container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">📊</div>
+                <div class="logo-text">Manfaat MBG</div>
+            </a>
+            <nav>
+                <a href="index.html" class="nav-link" data-i18n="nav_dashboard">Dashboard</a>
+                <a href="dampak.html" class="nav-link active" data-i18n="nav_impact">Dampak Berkelanjutan</a>
+            </nav>
+            <div class="header-right">
+                <button class="dark-mode-btn" id="dark-mode-btn" onclick="toggleDarkMode()" title="Toggle Dark Mode">🌙</button>
+                <div class="lang-toggle-group">
+                    <button class="lang-btn active" id="lang-id-btn" data-lang="id" onclick="switchLang('id')" title="Bahasa Indonesia"><span class="flag-circle flag-id"></span> ID</button>
+                    <button class="lang-btn" id="lang-en-btn" data-lang="en" onclick="switchLang('en')" title="English"><span class="flag-circle flag-en"></span> EN</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="hero-container">
+            <h1 data-i18n="impact_title">Laporan Dampak Berkelanjutan</h1>
+            <p data-i18n="impact_subtitle">METRIK NILAI SOSIAL & PEMBANGUNAN</p>
+
+            <!-- Partner Logos -->
+            <div class="hero-partners">
+                <span class="partners-label" data-i18n="hero_partners_label">Core Partners</span>
+                <div class="partners-row">
+                    <div class="partner-badge">
+                        <span data-i18n="hero_partner_ffi">FFI</span>
+                    </div>
+                    <div class="partner-badge">
+                        <span data-i18n="hero_partner_bgn">BGN</span>
+                    </div>
+                    <div class="partner-badge">
+                        <span data-i18n="hero_partner_wfp">WFP</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Operational Highlights Stats -->
+            <div class="hero-stats">
+                <div class="stat-card">
+                    <span class="stat-value" data-i18n="hero_stat_beneficiaries_value">76,5 Juta</span>
+                    <span class="stat-label" data-i18n="hero_stat_beneficiaries_label">Penerima Manfaat</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-value" data-i18n="hero_stat_jobs_value">2,09 Juta</span>
+                    <span class="stat-label" data-i18n="hero_stat_jobs_label">Lapangan Kerja</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-value" data-i18n="hero_stat_transfer_value">Rp 18,8 T</span>
+                    <span class="stat-label" data-i18n="hero_stat_transfer_label">Transfer Nilai</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-value" data-i18n="hero_stat_sroi_value">9x</span>
+                    <span class="stat-label" data-i18n="hero_stat_sroi_label">SROI</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <main>
+        <!-- COST-BENEFIT ANALYSIS SECTION -->
+        <section>
+            <div class="container">
+                <div class="cba-header">
+                    <span class="cba-icon">📊</span>
+                    <span class="cba-title" data-i18n="cba_header">COST BENEFIT INSIGHT — Analisis Dampak Sosial</span>
+                </div>
+
+                <div class="cba-content">
+                    <p data-i18n="cba_description">Analisis Dampak Sosial dengan pendekatan Cost-Benefit Analysis (CBA) didasarkan pada metodologi dari Badan Pangan Dunia (WFP) untuk mengukur efektivitas program pangan. CBA untuk program Makan Bergizi Gratis (MBG) mengukur manfaat finansial konkret dari pemberian makanan bergizi di sekolah dibandingkan dengan biayanya, menunjukkan bahwa investasi dalam nutrisi anak adalah keputusan ekonomi yang menguntungkan bagi rumah tangga dan negara.</p>
+                </div>
+
+                <div class="cba-cards">
+                    <div class="cba-card">
+                        <h3 data-i18n="cba_understanding">PENGERTIAN CBA</h3>
+                        <ul>
+                            <li data-i18n="cba_understanding_1">Alat analisis yang membandingkan biaya program (input) dengan manfaat yang dihasilkan (output) dalam istilah moneter</li>
+                            <li data-i18n="cba_understanding_2">Membantu pengambil kebijakan memahami nilai investasi dalam program kesehatan dan gizi masyarakat</li>
+                        </ul>
+                    </div>
+                    <div class="cba-card">
+                        <h3 data-i18n="cba_benefits">MANFAAT CBA</h3>
+                        <ul>
+                            <li data-i18n="cba_benefits_1">Mengukur efisiensi penggunaan dana publik untuk kesejahteraan sosial</li>
+                            <li data-i18n="cba_benefits_2">Memberikan bukti kuantitatif untuk mendukung kebijakan dan program pembangunan</li>
+                            <li data-i18n="cba_benefits_3">Menunjukkan return on investment (ROI) dari setiap rupiah yang diinvestasikan dalam nutrisi anak</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="cba-warning" data-i18n="cba_warning">
+                    ⚠️ Hasil studi CBA tidak boleh digunakan sebagai referensi untuk mendefinisikan desain program atau kebijakan tanpa mempertimbangkan konteks lokal, kebutuhan spesifik komunitas, dan faktor-faktor kualitatif lainnya.
+                </div>
+
+                <div class="cba-details">
+                    <div class="cba-detail-card">
+                        <h4 data-i18n="cba_context_title">CBA dalam Konteks Program MBG</h4>
+                        <p data-i18n="cba_context_desc">CBA program MBG mengukur biaya penyediaan makanan bergizi (kos bahan, logistik, upah) versus manfaat ekonomi yang diterima rumah tangga (penghematan pengeluaran pangan, peningkatan pendapatan anak-anak yang lebih produktif) serta manfaat jangka panjang untuk negara (pengurangan beban kesehatan, peningkatan SDM).</p>
+                    </div>
+                    <div class="cba-detail-card">
+                        <h4 data-i18n="cba_measurement_title">Cara Pengukuran CBA</h4>
+                        <p data-i18n="cba_measurement_desc">Metodologi CBA mengukur semua biaya dan manfaat dalam satuan Rupiah. Dengan menghitung rasio manfaat-biaya, studi ini menunjukkan bahwa program makanan sekolah adalah investasi ekonomi yang menguntungkan, menghasilkan manfaat sosial yang berlipat ganda dari biaya awalnya.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SROI RATIO BANNER -->
+        <section>
+            <div class="container">
+                <div class="sroi-banner">
+                    <h2 data-i18n="sroi_ratio">🎯 RASIO SROI: 1 : 9</h2>
+                    <p data-i18n="sroi_subtitle">Nilai Sosial per Investasi</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ECONOMIC MODEL -->
+        <section>
+            <div class="container">
+                <h2 class="section-title" data-i18n="model_title">💰 Model Ekonomi Makan Bergizi Gratis</h2>
+                <p class="section-subtitle" data-i18n="model_description">Kerangka kerja kontribusi terhadap Tujuan Pembangunan Berkelanjutan (SDG) melalui transfer nilai ekonomi, peningkatan kapasitas rumah tangga, stimulus ekonomi lokal, dan manfaat kesehatan jangka panjang bagi generasi muda Indonesia.</p>
+
+                <div class="economic-model-cards">
+                    <div class="model-card">
+                        <h3 data-i18n="model_1_title">Transfer Nilai ke Rumah Tangga</h3>
+                        <div class="metric">Rp 286,9 T / tahun</div>
+                        <ul>
+                            <li data-i18n="model_1_bullet">Transfer nilai = dukungan pendapatan rumah tangga untuk kebutuhan pangan anak</li>
+                        </ul>
+                    </div>
+                    <div class="model-card">
+                        <h3 data-i18n="model_2_title">Return on Investment pada Aset Rumah Tangga</h3>
+                        <div class="metric">Rp 224,8 T / tahun</div>
+                        <ul>
+                            <li data-i18n="model_2_bullet">ROI = peningkatan kapasitas ekonomi rumah tangga dari investasi dalam gizi anak</li>
+                        </ul>
+                    </div>
+                    <div class="model-card">
+                        <h3 data-i18n="model_3_title">Dampak Spillover Ekonomi</h3>
+                        <div class="metric">Rp 825,4 T / tahun</div>
+                        <ul>
+                            <li data-i18n="model_3_bullet">Spillover = peningkatan kegiatan ekonomi lokal melalui pengadaan dan distribusi komoditas</li>
+                        </ul>
+                    </div>
+                    <div class="model-card">
+                        <h3 data-i18n="model_4_title">Kesetaraan Gender</h3>
+                        <div class="metric">-18% Stunting</div>
+                        <ul>
+                            <li data-i18n="model_4_bullet">Penyediaan 30% asupan gizi harian, mengurangi prevalensi kekurangan mikronutrien</li>
+                        </ul>
+                    </div>
+                    <div class="model-card">
+                        <h3 data-i18n="model_5_title">Peningkatan Pendapatan</h3>
+                        <div class="metric">Rp 1.103,9 T / tahun</div>
+                        <ul>
+                            <li data-i18n="model_5_bullet">Meningkatkan kehadiran sekolah dan menurunkan angka dropout melalui nutrisi optimal</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SDG IMPACT CARDS — new design -->
+        <section>
+            <div class="container">
+                <h2 class="section-title" data-i18n="sdg_title">🌱 Dampak terhadap Tujuan Pembangunan Berkelanjutan</h2>
+                <div class="sdg-layout">
+                    <!-- Left intro panel -->
+                    <div class="sdg-intro-panel">
+                        <div class="sdg-intro-icon">🌐</div>
+                        <h2>Pembangunan Berkelanjutan</h2>
+                        <p>Selaras dengan Tujuan Pembangunan Berkelanjutan (SDG) PBB, program MBG berkontribusi langsung pada 7 dari 17 tujuan pembangunan — menciptakan dampak pembangunan manusia yang terukur di seluruh Indonesia.</p>
+                    </div>
+                    <!-- Right cards grid -->
+                    <div class="sdg-cards-grid">
+                        <!-- SDG 1 -->
+                        <div class="sdg-card-new">
+                            <div class="sdg-card-bg" style="background: radial-gradient(ellipse at 80% 80%, #fca5a5 0%, transparent 70%);"></div>
+                            <div class="sdg-card-content">
+                                <div class="sdg-card-top">
+                                    <div class="sdg-badge sdg-badge-1">1</div>
+                                    <span class="sdg-tujuan-tag">TUJUAN</span>
+                                </div>
+                                <div class="sdg-card-title">Tanpa Kemiskinan</div>
+                                <div class="sdg-card-metric">688.365 Petani, +46% Pendapatan</div>
+                                <p class="sdg-card-desc">Peluang ekonomi bagi petani lokal melalui kontrak pengadaan komoditas berkelanjutan.</p>
+                            </div>
+                        </div>
+                        <!-- SDG 2 -->
+                        <div class="sdg-card-new">
+                            <div class="sdg-card-bg" style="background: radial-gradient(ellipse at 80% 80%, #fde68a 0%, transparent 70%);"></div>
+                            <div class="sdg-card-content">
+                                <div class="sdg-card-top">
+                                    <div class="sdg-badge sdg-badge-2">2</div>
+                                    <span class="sdg-tujuan-tag">TUJUAN</span>
+                                </div>
+                                <div class="sdg-card-title">Tanpa Kelaparan</div>
+                                <div class="sdg-card-metric">76,5 Juta Anak Terpenuhi</div>
+                                <p class="sdg-card-desc">Pengurangan langsung ketidakamanan pangan dan malnutrisi di seluruh Indonesia.</p>
+                            </div>
+                        </div>
+                        <!-- SDG 3 -->
+                        <div class="sdg-card-new">
+                            <div class="sdg-card-bg" style="background: radial-gradient(ellipse at 80% 80%, #bbf7d0 0%, transparent 70%);"></div>
+                            <div class="sdg-card-content">
+                                <div class="sdg-card-top">
+                                    <div class="sdg-badge sdg-badge-3">3</div>
+                                    <span class="sdg-tujuan-tag">TUJUAN</span>
+                                </div>
+                                <div class="sdg-card-title">Kesehatan yang Baik</div>
+                                <div class="sdg-card-metric">-18% Risiko Stunting</div>
+                                <p class="sdg-card-desc">Peningkatan asupan mikronutrien melalui menu bergizi yang diperkaya setiap hari.</p>
+                            </div>
+                        </div>
+                        <!-- SDG 4 -->
+                        <div class="sdg-card-new">
+                            <div class="sdg-card-bg" style="background: radial-gradient(ellipse at 80% 80%, #fca5a5 0%, transparent 70%);"></div>
+                            <div class="sdg-card-content">
+                                <div class="sdg-card-top">
+                                    <div class="sdg-badge sdg-badge-4">4</div>
+                                    <span class="sdg-tujuan-tag">TUJUAN</span>
+                                </div>
+                                <div class="sdg-card-title">Pendidikan Berkualitas</div>
+                                <div class="sdg-card-metric">97,5% Kehadiran Sekolah</div>
+                                <p class="sdg-card-desc">Memberikan asupan kognitif yang dibutuhkan untuk pembelajaran efektif di kelas.</p>
+                            </div>
+                        </div>
+                        <!-- SDG 5 -->
+                        <div class="sdg-card-new">
+                            <div class="sdg-card-bg" style="background: radial-gradient(ellipse at 80% 80%, #fed7aa 0%, transparent 70%);"></div>
+                            <div class="sdg-card-content">
+                                <div class="sdg-card-top">
+                                    <div class="sdg-badge sdg-badge-5">5</div>
+                                    <span class="sdg-tujuan-tag">TUJUAN</span>
+                                </div>
+                                <div class="sdg-card-title">Kesetaraan Gender</div>
+                                <div class="sdg-card-metric">54% Tenaga Kerja Perempuan</div>
+                                <p class="sdg-card-desc">Distribusi penerima manfaat setara, mayoritas tenaga kerja SPPG adalah perempuan.</p>
+                            </div>
+                        </div>
+                        <!-- SDG 8 -->
+                        <div class="sdg-card-new">
+                            <div class="sdg-card-bg" style="background: radial-gradient(ellipse at 80% 80%, #fecaca 0%, transparent 70%);"></div>
+                            <div class="sdg-card-content">
+                                <div class="sdg-card-top">
+                                    <div class="sdg-badge sdg-badge-8">8</div>
+                                    <span class="sdg-tujuan-tag">TUJUAN</span>
+                                </div>
+                                <div class="sdg-card-title">Pekerjaan Layak</div>
+                                <div class="sdg-card-metric">2,09 Juta Lapangan Kerja</div>
+                                <p class="sdg-card-desc">Mendukung ekonomi lokal dengan 688.365 supplier petani dan pekerja SPPG tersebar merata.</p>
+                            </div>
+                        </div>
+                        <!-- SDG 12 -->
+                        <div class="sdg-card-new">
+                            <div class="sdg-card-bg" style="background: radial-gradient(ellipse at 80% 80%, #fef08a 0%, transparent 70%);"></div>
+                            <div class="sdg-card-content">
+                                <div class="sdg-card-top">
+                                    <div class="sdg-badge sdg-badge-12">12</div>
+                                    <span class="sdg-tujuan-tag">TUJUAN</span>
+                                </div>
+                                <div class="sdg-card-title">Produksi Bertanggung Jawab</div>
+                                <div class="sdg-card-metric">1,2% Minim Sisa Makanan</div>
+                                <p class="sdg-card-desc">Rantai pasok dioptimalkan untuk produksi sirkular dengan minimasi limbah pangan.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SROI ANALYSIS -->
+        <section>
+            <div class="container">
+                <h2 class="section-title with-accent" data-i18n="sroi_analysis_title">📊 Analisis Pengembalian Sosial Atas Investasi (SROI)</h2>
+                <div class="sroi-section">
+                    <div class="sroi-title">
+                        <h2 data-i18n="sroi_main">PENGEMBALIAN SOSIAL ATAS INVESTASI: 9x ROI</h2>
+                        <p data-i18n="sroi_explanation">Untuk setiap Rp 1 yang diinvestasikan, tercipta Rp 9 nilai sosial ekonomi</p>
+                    </div>
+
+                    <div class="sroi-summary">
+                        <div class="sroi-card">
+                            <div class="label">Total Investasi/Tahun</div>
+                            <div class="value">Rp 294,8 T</div>
+                            <div style="font-size:10px;color:#6b7280;margin-top:4px;">25.495 SPPG × 12 bulan</div>
+                        </div>
+                        <div class="sroi-card" style="border-color:#E63946;">
+                            <div class="label">Total Nilai Manfaat</div>
+                            <div class="value" style="color:#E63946;">Rp 2.653 T</div>
+                            <div style="font-size:10px;color:#6b7280;margin-top:4px;">Rp 6,2 terukur + Rp 2,8 spillover</div>
+                        </div>
+                        <div class="sroi-card" style="border-color:#E63946;">
+                            <div class="label">Rasio Manfaat-Biaya</div>
+                            <div class="value" style="color:#E63946;">9x</div>
+                            <div style="font-size:10px;color:#6b7280;margin-top:4px;">Per Rp 1 diinvestasikan</div>
+                        </div>
+                        <div class="sroi-card">
+                            <div class="label">Nilai Sosial Bersih</div>
+                            <div class="value">Rp 2.358 T</div>
+                            <div style="font-size:10px;color:#6b7280;margin-top:4px;">Manfaat dikurangi investasi</div>
+                        </div>
+                    </div>
+
+                    <div class="sroi-breakdown">
+                        <div class="breakdown-section">
+                            <h3>Komponen Biaya per SPPG/Bulan (Rp 963,5 Juta)</h3>
+                            <div class="breakdown-item">
+                                <div class="breakdown-label">
+                                    <span>🥗 Komoditas Pangan</span>
+                                    <span>Rp 739 Jt · 76,7%</span>
+                                </div>
+                                <div class="breakdown-bar">
+                                    <div class="breakdown-fill" style="width: 76.7%"></div>
+                                </div>
+                            </div>
+                            <div class="breakdown-item">
+                                <div class="breakdown-label">
+                                    <span>💵 Remunerasi Pekerja</span>
+                                    <span>Rp 62,5 Jt · 6,5%</span>
+                                </div>
+                                <div class="breakdown-bar">
+                                    <div class="breakdown-fill" style="width: 6.5%"></div>
+                                </div>
+                            </div>
+                            <div class="breakdown-item">
+                                <div class="breakdown-label">
+                                    <span>🚛 Transport & Dishwasher</span>
+                                    <span>Rp 50 Jt · 5,2%</span>
+                                </div>
+                                <div class="breakdown-bar">
+                                    <div class="breakdown-fill" style="width: 5.2%"></div>
+                                </div>
+                            </div>
+                            <div class="breakdown-item">
+                                <div class="breakdown-label">
+                                    <span>📋 Lainnya (overhead, dll)</span>
+                                    <span>Rp 112 Jt · 11,6%</span>
+                                </div>
+                                <div class="breakdown-bar">
+                                    <div class="breakdown-fill" style="width: 11.6%"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="breakdown-section">
+                            <h3>Komponen Manfaat (dari total Rp 2.653 T)</h3>
+                            <div class="breakdown-item">
+                                <div class="breakdown-label">
+                                    <span>🏠 Transfer Nilai ke Rumah Tangga</span>
+                                    <span>Rp 286,9 T · 10,8%</span>
+                                </div>
+                                <div class="breakdown-bar">
+                                    <div class="breakdown-fill" style="width: 10.8%"></div>
+                                </div>
+                            </div>
+                            <div class="breakdown-item">
+                                <div class="breakdown-label">
+                                    <span>📈 ROI pada Aset Rumah Tangga</span>
+                                    <span>Rp 224,8 T · 8,5%</span>
+                                </div>
+                                <div class="breakdown-bar">
+                                    <div class="breakdown-fill" style="width: 8.5%"></div>
+                                </div>
+                            </div>
+                            <div class="breakdown-item">
+                                <div class="breakdown-label">
+                                    <span>🚀 Peningkatan Pendapatan</span>
+                                    <span>Rp 1.103,9 T · 41,6%</span>
+                                </div>
+                                <div class="breakdown-bar">
+                                    <div class="breakdown-fill" style="width: 41.6%"></div>
+                                </div>
+                            </div>
+                            <div class="breakdown-item">
+                                <div class="breakdown-label">
+                                    <span>⚖️ Kesetaraan Gender</span>
+                                    <span>Rp 212 T · 8%</span>
+                                </div>
+                                <div class="breakdown-bar">
+                                    <div class="breakdown-fill" style="width: 8%"></div>
+                                </div>
+                            </div>
+                            <div class="breakdown-item">
+                                <div class="breakdown-label">
+                                    <span>🌍 Dampak Spillover Ekonomi</span>
+                                    <span>Rp 825,4 T · 31,1%</span>
+                                </div>
+                                <div class="breakdown-bar">
+                                    <div class="breakdown-fill" style="width: 31.1%; background: #10b981;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ECONOMIC MODEL -->
+        <section>
+            <div class="container">
+                <h2 class="section-title" data-i18n="economic_title">💵 Model Ekonomi Rinci</h2>
+                <p class="section-subtitle" data-i18n="economic_subtitle">Analisis mendalam komponen ekonomi dan kontribusi terhadap pertumbuhan lokal</p>
+
+                <div class="sroi-banner">
+                    <p data-i18n="economic_subtitle_main">Manfaat Ekonomi Tersebar di Seluruh Rantai Nilai</p>
+                </div>
+
+                <div class="commodity-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th data-i18n="commodity_header">Komoditas</th>
+                                <th data-i18n="volume_header">Volume</th>
+                                <th data-i18n="value_header">Nilai (Rp)</th>
+                                <th data-i18n="impact_header">Dampak</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><span class="commodity-icon">🍚</span>Makanan Pokok<br><small style="color:#9ca3af">Beras, Jagung, Singkong, dll</small></td>
+                                <td>1,22 Juta Ton</td>
+                                <td>Rp 226,1 T</td>
+                                <td>Karbohidrat utama sumber energi harian</td>
+                            </tr>
+                            <tr>
+                                <td><span class="commodity-icon">🍗</span>Lauk Pauk<br><small style="color:#9ca3af">Ayam, Telur, Ikan, Tempe, dll</small></td>
+                                <td>3,59 Juta Ton</td>
+                                <td>Rp 226,1 T</td>
+                                <td>Sumber protein hewani dan nabati esensial</td>
+                            </tr>
+                            <tr>
+                                <td><span class="commodity-icon">🍊</span>Buah-Buahan<br><small style="color:#9ca3af">Jeruk, Pisang, Semangka, Pepaya, dll</small></td>
+                                <td>2,14 Juta Ton</td>
+                                <td>Rp 226,1 T</td>
+                                <td>Vitamin dan antioksidan untuk imunitas</td>
+                            </tr>
+                            <tr>
+                                <td><span class="commodity-icon">🥬</span>Sayuran<br><small style="color:#9ca3af">Bayam, Sawi, Wortel, Kangkung, dll</small></td>
+                                <td>1,15 Juta Ton</td>
+                                <td>Rp 226,1 T</td>
+                                <td>Mineral, serat, dan mikronutrien penting</td>
+                            </tr>
+                            <tr class="total-row">
+                                <td><strong>TOTAL KEBUTUHAN TAHUNAN</strong></td>
+                                <td><strong>8,1 Juta Ton</strong></td>
+                                <td><strong>Rp 226,1 T</strong></td>
+                                <td><strong>Berdasarkan 25.495 SPPG × 12 bulan</strong></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- THEORY OF CHANGE -->
+        <section>
+            <div class="container">
+                <h2 class="section-title" data-i18n="toc_title">🎯 Teori Perubahan (Theory of Change)</h2>
+                <p class="section-subtitle" data-i18n="toc_subtitle">Mekanisme perubahan dari input program hingga dampak jangka panjang</p>
+
+                <div class="toc-container">
+                    <div class="toc-flow">
+                        <div class="toc-step activities">
+                            <h3 data-i18n="toc_activities">📋 Kegiatan</h3>
+                            <ul>
+                                <li data-i18n="toc_activities_1">Pengadaan makanan bergizi</li>
+                                <li data-i18n="toc_activities_2">Distribusi ke sekolah</li>
+                                <li data-i18n="toc_activities_3">Monitoring kualitas</li>
+                            </ul>
+                        </div>
+
+                        <div class="toc-step output">
+                            <h3 data-i18n="toc_outputs">📦 Output</h3>
+                            <ul>
+                                <li data-i18n="toc_outputs_1">76,5 juta anak dapat makanan</li>
+                                <li data-i18n="toc_outputs_2">2,09 juta lapangan kerja</li>
+                                <li data-i18n="toc_outputs_3">Pertumbuhan bisnis lokal</li>
+                            </ul>
+                        </div>
+
+                        <div class="toc-step outcome">
+                            <h3 data-i18n="toc_outcomes">✅ Hasil</h3>
+                            <ul>
+                                <li data-i18n="toc_outcomes_1">Gizi anak meningkat 30%</li>
+                                <li data-i18n="toc_outcomes_2">Kehadiran 97,5%</li>
+                                <li data-i18n="toc_outcomes_3">Pendapatan rumah tangga +25%</li>
+                            </ul>
+                        </div>
+
+                        <div class="toc-step impact">
+                            <h3 data-i18n="toc_impact">⭐ Dampak</h3>
+                            <ul>
+                                <li data-i18n="toc_impact_1">-18% stunting</li>
+                                <li data-i18n="toc_impact_2">SDM yang berkualitas</li>
+                                <li data-i18n="toc_impact_3">Pembangunan berkelanjutan</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <p class="toc-caption" data-i18n="toc_caption">Dampak pada Tujuan Pembangunan Berkelanjutan PBB</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- NON-QUANTITATIVE BENEFITS -->
+        <section>
+            <div class="container">
+                <h2 class="section-title" data-i18n="nonquant_title">🌟 Manfaat Non-Kuantitatif</h2>
+                <p class="section-subtitle" data-i18n="nonquant_subtitle">Dampak sosial dan behavioral yang sulit diukur namun sangat bermakna</p>
+
+                <div class="benefits-grid">
+                    <div class="benefit-card">
+                        <div class="benefit-icon">👶</div>
+                        <h3 data-i18n="benefit_1_title">Kesehatan Jangka Panjang</h3>
+                        <p data-i18n="benefit_1_desc">Anak yang terpenuhi gizinya di usia kritis berkembang lebih optimal, dengan risiko penyakit kronis yang lebih rendah di masa dewasa</p>
+                    </div>
+
+                    <div class="benefit-card">
+                        <div class="benefit-icon">📚</div>
+                        <h3 data-i18n="benefit_2_title">Performa Akademik</h3>
+                        <p data-i18n="benefit_2_desc">Konsentrasi meningkat, ingatan lebih kuat, dan kemampuan belajar lebih baik membawa prestasi akademik yang lebih tinggi</p>
+                    </div>
+
+                    <div class="benefit-card">
+                        <div class="benefit-icon">👥</div>
+                        <h3 data-i18n="benefit_3_title">Kohesi Sosial</h3>
+                        <p data-i18n="benefit_3_desc">Program ini memperkuat rasa kebersamaan di sekolah dan masyarakat, menciptakan ikatan sosial yang lebih kuat antar anak dan keluarga</p>
+                    </div>
+
+                    <div class="benefit-card">
+                        <div class="benefit-icon">🌱</div>
+                        <h3 data-i18n="benefit_4_title">Perubahan Perilaku Gizi</h3>
+                        <p data-i18n="benefit_4_desc">Anak dan keluarga belajar tentang pentingnya nutrisi, menciptakan kebiasaan makan sehat yang berkelanjutan</p>
+                    </div>
+
+                    <div class="benefit-card">
+                        <div class="benefit-icon">💪</div>
+                        <h3 data-i18n="benefit_5_title">Pemberdayaan Komunitas</h3>
+                        <p data-i18n="benefit_5_desc">Petani, distributor, dan pedagang lokal merasakan peningkatan kesejahteraan, memperkuat ekonomi grassroots dan kemandirian komunitas</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- COLLABORATION SECTION -->
+        <section class="collab-section">
+            <div class="container">
+                <h2 class="section-title" data-i18n="collab_title">🤝 Kemitraan & Kolaborasi Terbuka</h2>
+                <p class="section-subtitle" data-i18n="collab_subtitle">Bekerja sama dengan institusi terkemuka untuk memperkuat ekosistem nutrisi dan pendidikan</p>
+
+                <div class="collab-grid">
+                    <div class="collab-card">
+                        <h3 class="collab-card-title" data-i18n="collab_1_title">Nusantara Food Research Lab</h3>
+                        <p class="collab-card-desc" data-i18n="collab_1_desc">Laboratorium penelitian mengembangkan formula makanan bergizi optimal yang disesuaikan dengan kebutuhan nutrisi anak Indonesia</p>
+                        <div class="collab-card-badge" data-i18n="collab_badge_research">🔬 Riset</div>
+                    </div>
+
+                    <div class="collab-card">
+                        <h3 class="collab-card-title" data-i18n="collab_2_title">AgriTech Innovation Center</h3>
+                        <p class="collab-card-desc" data-i18n="collab_2_desc">Pusat inovasi teknologi pertanian untuk meningkatkan efisiensi produksi komoditas dan distribusi ke sekolah-sekolah</p>
+                        <div class="collab-card-badge" data-i18n="collab_badge_tech">⚙️ Teknologi</div>
+                    </div>
+
+                    <div class="collab-card">
+                        <h3 class="collab-card-title" data-i18n="collab_3_title">Future Nutrition Foundation</h3>
+                        <p class="collab-card-desc" data-i18n="collab_3_desc">Yayasan global yang fokus pada pendidikan gizi dan advokasi kebijakan nutrisi untuk anak-anak di seluruh dunia</p>
+                        <div class="collab-card-badge" data-i18n="collab_badge_education">📚 Advokasi</div>
+                    </div>
+
+                    <div class="collab-card">
+                        <h3 class="collab-card-title" data-i18n="collab_4_title">Youth Farmers Collective</h3>
+                        <p class="collab-card-desc" data-i18n="collab_4_desc">Komunitas petani muda yang menyediakan produk segar berkualitas tinggi dan berkelanjutan untuk program MBG</p>
+                        <div class="collab-card-badge" data-i18n="collab_badge_supply">🌾 Pasokan</div>
+                    </div>
+
+                    <div class="collab-card">
+                        <h3 class="collab-card-title" data-i18n="collab_5_title">Food Resilience Institute</h3>
+                        <p class="collab-card-desc" data-i18n="collab_5_desc">Institut yang mengembangkan sistem ketahanan pangan dan mitigasi risiko untuk keberlanjutan program jangka panjang</p>
+                        <div class="collab-card-badge" data-i18n="collab_badge_resilience">🛡️ Ketahanan</div>
+                    </div>
+
+                    <div class="collab-card">
+                        <h3 class="collab-card-title" data-i18n="collab_6_title">Sustainable Supply Forum</h3>
+                        <p class="collab-card-desc" data-i18n="collab_6_desc">Forum kolaboratif untuk memastikan rantai pasokan yang berkelanjutan, etis, dan menguntungkan semua pihak</p>
+                        <div class="collab-card-badge" data-i18n="collab_badge_sustainability">♻️ Keberlanjutan</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4 data-i18n="footer_about">Tentang</h4>
+                <ul>
+                    <li><a href="index.html" data-i18n="footer_about_program">Tentang Program</a></li>
+                    <li><a href="#metodologi" data-i18n="footer_about_impact">Metodologi Dampak</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4 data-i18n="footer_resources">Sumber Daya</h4>
+                <ul>
+                    <li><a href="index.html" data-i18n="footer_reports">Laporan Lengkap</a></li>
+                    <li><a href="index.html" data-i18n="footer_data">Data & Statistik</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4 data-i18n="footer_contact">Kontak</h4>
+                <ul>
+                    <li><a href="mailto:info@mbg.id" data-i18n="footer_email">📧 Email</a></li>
+                    <li><a href="https://facebook.com" target="_blank" rel="noopener noreferrer" data-i18n="footer_facebook">👍 Facebook</a></li>
+                    <li><a href="https://instagram.com" target="_blank" rel="noopener noreferrer" data-i18n="footer_instagram">📸 Instagram</a></li>
+                </ul>
+                <div class="footer-social">
+                    <a href="https://facebook.com" class="social-link" title="Facebook" target="_blank" rel="noopener noreferrer">f</a>
+                    <a href="https://instagram.com" class="social-link" title="Instagram" target="_blank" rel="noopener noreferrer">📷</a>
+                    <a href="https://tiktok.com" class="social-link" title="TikTok" target="_blank" rel="noopener noreferrer">🎵</a>
+                    <a href="https://twitter.com" class="social-link" title="X" target="_blank" rel="noopener noreferrer">𝕏</a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4 data-i18n="footer_newsletter">Newsletter</h4>
+                <p style="font-size: 13px; color: var(--text-muted); margin-bottom: 12px;" data-i18n="footer_newsletter_desc">Dapatkan update terbaru tentang program dan dampaknya</p>
+                <form class="newsletter-form" onsubmit="event.preventDefault(); alert(this.querySelector('input').value ? 'Terima kasih telah berlangganan!' : 'Masukkan email Anda');">
+                    <label for="newsletter-email" style="position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden;">Alamat email untuk newsletter</label>
+                    <input type="email" id="newsletter-email" class="newsletter-input" placeholder="email@anda.com" required aria-label="Alamat email untuk newsletter" />
+                    <button type="submit" class="newsletter-btn" data-i18n="footer_newsletter_btn">Langganan</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom" data-i18n="footer_copyright">
+            © 2024 Program Makan Bergizi Gratis. Semua hak dilindungi.
+        </div>
+    </footer>
+
+    <!-- INTERNATIONALIZATION SCRIPT -->
+    <script>
+        const translations = {
+            id: {
+                // Header
+                "brand": "Manfaat MBG",
+                "nav_dashboard": "Dashboard",
+                "nav_impact": "Dampak Berkelanjutan",
+
+                // Hero
+                "impact_title": "Laporan Dampak Berkelanjutan",
+                "impact_subtitle": "METRIK NILAI SOSIAL & PEMBANGUNAN",
+
+                // CBA Section
+                "cba_header": "COST BENEFIT INSIGHT — Analisis Dampak Sosial",
+                "cba_description": "Analisis Dampak Sosial dengan pendekatan Cost-Benefit Analysis (CBA) didasarkan pada metodologi dari Badan Pangan Dunia (WFP) untuk mengukur efektivitas program pangan. CBA untuk program Makan Bergizi Gratis (MBG) mengukur manfaat finansial konkret dari pemberian makanan bergizi di sekolah dibandingkan dengan biayanya.",
+                "cba_understanding": "PENGERTIAN CBA",
+                "cba_understanding_1": "Alat analisis yang membandingkan biaya program (input) dengan manfaat yang dihasilkan (output) dalam istilah moneter",
+                "cba_understanding_2": "Membantu pengambil kebijakan memahami nilai investasi dalam program kesehatan dan gizi masyarakat",
+                "cba_benefits": "MANFAAT CBA",
+                "cba_benefits_1": "Mengukur efisiensi penggunaan dana publik untuk kesejahteraan sosial",
+                "cba_benefits_2": "Memberikan bukti kuantitatif untuk mendukung kebijakan dan program pembangunan",
+                "cba_benefits_3": "Menunjukkan return on investment (ROI) dari setiap rupiah yang diinvestasikan dalam nutrisi anak",
+                "cba_warning": "⚠️ Hasil studi CBA tidak boleh digunakan sebagai referensi untuk mendefinisikan desain program atau kebijakan tanpa mempertimbangkan konteks lokal, kebutuhan spesifik komunitas, dan faktor-faktor kualitatif lainnya.",
+                "cba_context_title": "CBA dalam Konteks Program MBG",
+                "cba_context_desc": "CBA program MBG mengukur biaya penyediaan makanan bergizi (kos bahan, logistik, upah) versus manfaat ekonomi yang diterima rumah tangga (penghematan pengeluaran pangan, peningkatan pendapatan anak-anak yang lebih produktif) serta manfaat jangka panjang untuk negara.",
+                "cba_measurement_title": "Cara Pengukuran CBA",
+                "cba_measurement_desc": "Metodologi CBA mengukur semua biaya dan manfaat dalam satuan Rupiah. Dengan menghitung rasio manfaat-biaya, studi ini menunjukkan bahwa program makanan sekolah adalah investasi ekonomi yang menguntungkan.",
+
+                // SROI Ratio
+                "sroi_ratio": "🎯 RASIO SROI: 1 : 9",
+                "sroi_subtitle": "Nilai Sosial per Investasi",
+
+                // Economic Model
+                "model_title": "💰 Model Ekonomi Makan Bergizi Gratis",
+                "model_description": "Kerangka kerja kontribusi terhadap Tujuan Pembangunan Berkelanjutan (SDG) melalui transfer nilai ekonomi, peningkatan kapasitas rumah tangga, stimulus ekonomi lokal, dan manfaat kesehatan jangka panjang bagi generasi muda Indonesia.",
+                "model_1_title": "Transfer Nilai ke Rumah Tangga",
+                "model_1_bullet": "Transfer nilai = dukungan pendapatan rumah tangga untuk kebutuhan pangan anak",
+                "model_2_title": "Return on Investment pada Aset Rumah Tangga",
+                "model_2_bullet": "ROI = peningkatan kapasitas ekonomi rumah tangga dari investasi dalam gizi anak",
+                "model_3_title": "Dampak Spillover Ekonomi",
+                "model_3_bullet": "Spillover = peningkatan kegiatan ekonomi lokal melalui pengadaan dan distribusi komoditas",
+                "model_4_title": "Peningkatan Kesehatan",
+                "model_4_bullet": "Penyediaan 30% asupan gizi harian, mengurangi prevalensi kekurangan mikronutrien",
+                "model_5_title": "Peningkatan Pendapatan",
+                "model_5_bullet": "Meningkatkan kehadiran sekolah dan menurunkan angka dropout melalui nutrisi optimal",
+
+                // SDG Section
+                "sdg_title": "🌱 Dampak terhadap Tujuan Pembangunan Berkelanjutan",
+                "sdg_goal": "TUJUAN",
+                "sdg_1_title": "Tanpa Kemiskinan",
+                "sdg_1_desc": "Peningkatan pendapatan melalui kontrak pengadaan kommoditas lokal",
+                "sdg_2_title": "Tanpa Kelaparan",
+                "sdg_2_desc": "Terpenuhi kebutuhan pangan dan gizi minimal setiap hari",
+                "sdg_3_title": "Kesehatan yang Baik",
+                "sdg_3_desc": "Pengurangan risiko kekurangan gizi dan penyakit terkait",
+                "sdg_4_title": "Pendidikan Berkualitas",
+                "sdg_4_desc": "Peningkatan kehadiran sekolah dan daya konsentrasi belajar",
+                "sdg_5_title": "Kesetaraan Gender",
+                "sdg_5_desc": "Kesetaraan tenaga kerja perempuan di program MBG",
+                "sdg_8_title": "Pekerjaan Layak",
+                "sdg_8_desc": "Penciptaan lapangan kerja lokal berkelanjutan",
+                "sdg_12_title": "Produksi Bertanggung Jawab",
+                "sdg_12_desc": "Minimalisasi food waste melalui manajemen logistik",
+
+                // SROI Analysis
+                "sroi_analysis_title": "📊 Analisis Pengembalian Sosial Atas Investasi (SROI)",
+                "sroi_main": "PENGEMBALIAN SOSIAL ATAS INVESTASI: 9x ROI",
+                "sroi_explanation": "Untuk setiap Rp 1 yang diinvestasikan, tercipta Rp 9 nilai sosial ekonomi",
+                "sroi_total_cost": "Total Biaya",
+                "sroi_total_benefit": "Total Manfaat",
+                "sroi_roi": "Return on Investment",
+                "sroi_net_value": "Nilai Sosial Bersih",
+                "cost_components": "Komponen Biaya",
+                "cost_commodities": "Komoditas",
+                "cost_logistics": "Logistik",
+                "cost_management": "Manajemen",
+                "cost_community": "Komunitas",
+                "benefit_components": "Komponen Manfaat",
+                "benefit_transfer": "Transfer Nilai",
+                "benefit_health": "Peningkatan Kesehatan",
+                "benefit_productivity": "Produktivitas",
+                "benefit_learning": "Peningkatan Pembelajaran",
+
+                // Economic Model Section
+                "economic_title": "💵 Model Ekonomi Rinci",
+                "economic_subtitle": "Analisis mendalam komponen ekonomi dan kontribusi terhadap pertumbuhan lokal",
+                "economic_subtitle_main": "Manfaat Ekonomi Tersebar di Seluruh Rantai Nilai",
+                "commodity_header": "Komoditas",
+                "volume_header": "Volume",
+                "value_header": "Nilai (Rp)",
+                "impact_header": "Dampak",
+                "rice_impact": "Pendukung utama ketersediaan kalori",
+                "protein_impact": "Sumber protein untuk pertumbuhan",
+                "veg_impact": "Vitamin dan mineral esensial",
+                "oil_impact": "Energi dan nutrisi mikro",
+                "other_impact": "Diversifikasi nutrisi",
+                "total_label": "TOTAL",
+                "total_impact": "Nilai Sosial Berkelanjutan",
+
+                // Theory of Change
+                "toc_title": "🎯 Teori Perubahan (Theory of Change)",
+                "toc_subtitle": "Mekanisme perubahan dari input program hingga dampak jangka panjang",
+                "toc_activities": "📋 Kegiatan",
+                "toc_activities_1": "Pengadaan makanan bergizi",
+                "toc_activities_2": "Distribusi ke sekolah",
+                "toc_activities_3": "Monitoring kualitas",
+                "toc_outputs": "📦 Output",
+                "toc_outputs_1": "76,5 juta anak dapat makanan",
+                "toc_outputs_2": "2,09 juta lapangan kerja",
+                "toc_outputs_3": "Pertumbuhan bisnis lokal",
+                "toc_outcomes": "✅ Hasil",
+                "toc_outcomes_1": "Gizi anak meningkat 30%",
+                "toc_outcomes_2": "Kehadiran 97,5%",
+                "toc_outcomes_3": "Pendapatan rumah tangga +25%",
+                "toc_impact": "⭐ Dampak",
+                "toc_impact_1": "-18% stunting",
+                "toc_impact_2": "SDM yang berkualitas",
+                "toc_impact_3": "Pembangunan berkelanjutan",
+                "toc_caption": "Dampak pada Tujuan Pembangunan Berkelanjutan PBB",
+
+                // Non-Quantitative Benefits
+                "nonquant_title": "🌟 Manfaat Non-Kuantitatif",
+                "nonquant_subtitle": "Dampak sosial dan behavioral yang sulit diukur namun sangat bermakna",
+                "benefit_1_title": "Kesehatan Jangka Panjang",
+                "benefit_1_desc": "Anak yang terpenuhi gizinya di usia kritis berkembang lebih optimal, dengan risiko penyakit kronis yang lebih rendah di masa dewasa",
+                "benefit_2_title": "Performa Akademik",
+                "benefit_2_desc": "Konsentrasi meningkat, ingatan lebih kuat, dan kemampuan belajar lebih baik membawa prestasi akademik yang lebih tinggi",
+                "benefit_3_title": "Kohesi Sosial",
+                "benefit_3_desc": "Program ini memperkuat rasa kebersamaan di sekolah dan masyarakat, menciptakan ikatan sosial yang lebih kuat antar anak dan keluarga",
+                "benefit_4_title": "Perubahan Perilaku Gizi",
+                "benefit_4_desc": "Anak dan keluarga belajar tentang pentingnya nutrisi, menciptakan kebiasaan makan sehat yang berkelanjutan",
+                "benefit_5_title": "Pemberdayaan Komunitas",
+                "benefit_5_desc": "Petani, distributor, dan pedagang lokal merasakan peningkatan kesejahteraan, memperkuat ekonomi grassroots dan kemandirian komunitas",
+
+                // Footer
+                "footer_about": "Tentang",
+                "footer_about_program": "Tentang Program",
+                "footer_about_impact": "Metodologi Dampak",
+                "footer_resources": "Sumber Daya",
+                "footer_reports": "Laporan Lengkap",
+                "footer_data": "Data & Statistik",
+                "footer_contact": "Kontak",
+                "footer_email": "📧 Email",
+                "footer_social": "Media Sosial",
+                "footer_facebook": "👍 Facebook",
+                "footer_instagram": "📸 Instagram",
+                "footer_newsletter": "Newsletter",
+                "footer_newsletter_desc": "Dapatkan update terbaru tentang program dan dampaknya",
+                "footer_newsletter_btn": "Langganan",
+                "footer_copyright": "© 2024 Program Makan Bergizi Gratis. Semua hak dilindungi.",
+
+                // Hero Partners & Stats
+                "hero_partners_label": "Mitra Inti",
+                "hero_partner_ffi": "FFI",
+                "hero_partner_bgn": "BGN",
+                "hero_partner_wfp": "WFP",
+                "hero_stat_beneficiaries_value": "76,5 Juta",
+                "hero_stat_beneficiaries_label": "Penerima Manfaat",
+                "hero_stat_jobs_value": "2,09 Juta",
+                "hero_stat_jobs_label": "Lapangan Kerja",
+                "hero_stat_transfer_value": "Rp 18,8 T",
+                "hero_stat_transfer_label": "Transfer Nilai",
+                "hero_stat_sroi_value": "9x",
+                "hero_stat_sroi_label": "SROI",
+
+                // Testimonials Section
+                "testimonials_title": "💬 Suara dari Pemangku Kepentingan",
+                "testimonials_subtitle": "Dampak nyata program Makan Bergizi Gratis dari perspektif berbagai stakeholder",
+                "testimonial_1_quote": "\"Program ini telah mengubah kehidupan anak saya. Dia lebih fokus di sekolah dan nilainya meningkat. Keluarga kami bisa mengalokasikan dana untuk kebutuhan lain.\"",
+                "testimonial_1_name": "Ibu Siti",
+                "testimonial_1_role": "Orang Tua Murid",
+                "testimonial_2_quote": "\"Kami melihat peningkatan signifikan dalam konsentrasi dan prestasi siswa kami. Perjalanan mereka menuju kesuksesan akademis menjadi lebih mudah.\"",
+                "testimonial_2_name": "Pak Budi, M.Pd",
+                "testimonial_2_role": "Guru Sekolah",
+                "testimonial_3_quote": "\"Sebagai siswa, mendapat makanan bergizi setiap hari membuat saya bisa berkonsentrasi lebih baik pada pembelajaran. Program ini benar-benar membantu sekali!\"",
+                "testimonial_3_name": "Rina",
+                "testimonial_3_role": "Siswa Sekolah",
+                "testimonial_4_quote": "\"Permintaan komoditas untuk program MBG memberikan pasar yang stabil bagi produk kami. Ini membantu kami mengembangkan usaha dan mempekerjakan lebih banyak tenaga kerja lokal.\"",
+                "testimonial_4_name": "Pak Yanto",
+                "testimonial_4_role": "Pemasok Lokal",
+                "testimonial_5_quote": "\"Program MBG adalah investasi cerdas dalam SDM generasi muda. Data menunjukkan peningkatan kesehatan dan produktivitas jangka panjang yang signifikan bagi ekonomi nasional.\"",
+                "testimonial_5_name": "Dr. Hendra",
+                "testimonial_5_role": "Pejabat Pemerintah",
+                "testimonial_6_quote": "\"Kami mengamati peningkatan nyata dalam outcomes kesehatan dan pendidikan anak-anak di program ini. Model ini layak dijadikan referensi regional untuk intervensi gizi sekolah.\"",
+                "testimonial_6_name": "Dr. Maria Chen",
+                "testimonial_6_role": "Organisasi Internasional",
+
+                // Collaboration Section
+                "collab_title": "🤝 Kemitraan & Kolaborasi Terbuka",
+                "collab_subtitle": "Bekerja sama dengan institusi terkemuka untuk memperkuat ekosistem nutrisi dan pendidikan",
+                "collab_1_title": "Nusantara Food Research Lab",
+                "collab_1_desc": "Laboratorium penelitian mengembangkan formula makanan bergizi optimal yang disesuaikan dengan kebutuhan nutrisi anak Indonesia",
+                "collab_2_title": "AgriTech Innovation Center",
+                "collab_2_desc": "Pusat inovasi teknologi pertanian untuk meningkatkan efisiensi produksi komoditas dan distribusi ke sekolah-sekolah",
+                "collab_3_title": "Future Nutrition Foundation",
+                "collab_3_desc": "Yayasan global yang fokus pada pendidikan gizi dan advokasi kebijakan nutrisi untuk anak-anak di seluruh dunia",
+                "collab_4_title": "Youth Farmers Collective",
+                "collab_4_desc": "Komunitas petani muda yang menyediakan produk segar berkualitas tinggi dan berkelanjutan untuk program MBG",
+                "collab_5_title": "Food Resilience Institute",
+                "collab_5_desc": "Institut yang mengembangkan sistem ketahanan pangan dan mitigasi risiko untuk keberlanjutan program jangka panjang",
+                "collab_6_title": "Sustainable Supply Forum",
+                "collab_6_desc": "Forum kolaboratif untuk memastikan rantai pasokan yang berkelanjutan, etis, dan menguntungkan semua pihak",
+                "collab_badge_research": "🔬 Riset",
+                "collab_badge_tech": "⚙️ Teknologi",
+                "collab_badge_education": "📚 Advokasi",
+                "collab_badge_supply": "🌾 Pasokan",
+                "collab_badge_resilience": "🛡️ Ketahanan",
+                "collab_badge_sustainability": "♻️ Keberlanjutan"
+            },
+            en: {
+                // Header
+                "brand": "MBG Benefits",
+                "nav_dashboard": "Dashboard",
+                "nav_impact": "Sustainable Impact",
+
+                // Hero
+                "impact_title": "Sustainable Impact Report",
+                "impact_subtitle": "SOCIAL VALUE & DEVELOPMENT METRICS",
+
+                // CBA Section
+                "cba_header": "COST BENEFIT INSIGHT — Social Impact Analysis",
+                "cba_description": "Social Impact Analysis using Cost-Benefit Analysis (CBA) approach is based on World Food Program (WFP) methodology to measure program effectiveness. The MBG CBA measures concrete financial benefits of nutritious meals in schools compared to costs, demonstrating that investment in child nutrition is an economically advantageous decision.",
+                "cba_understanding": "CBA UNDERSTANDING",
+                "cba_understanding_1": "Analysis tool comparing program costs (input) with benefits produced (output) in monetary terms",
+                "cba_understanding_2": "Helps policymakers understand the value of investing in public health and nutrition programs",
+                "cba_benefits": "CBA BENEFITS",
+                "cba_benefits_1": "Measures efficiency of public fund usage for social welfare",
+                "cba_benefits_2": "Provides quantitative evidence to support development policies and programs",
+                "cba_benefits_3": "Shows return on investment (ROI) from every rupiah invested in child nutrition",
+                "cba_warning": "⚠️ CBA results should not be used as reference for program design or policy without considering local context, specific community needs, and other qualitative factors.",
+                "cba_context_title": "CBA in MBG Program Context",
+                "cba_context_desc": "MBG CBA measures costs of providing nutritious food (materials, logistics, wages) versus economic benefits received by households (food spending savings, increased productivity of children) and long-term national benefits.",
+                "cba_measurement_title": "CBA Measurement Method",
+                "cba_measurement_desc": "CBA methodology measures all costs and benefits in Rupiah. By calculating benefit-cost ratio, this study shows that school feeding programs are economically advantageous investments.",
+
+                // SROI Ratio
+                "sroi_ratio": "🎯 SROI RATIO: 1 : 9",
+                "sroi_subtitle": "Social Value per Investment",
+
+                // Economic Model
+                "model_title": "💰 School Feeding Economic Model",
+                "model_description": "Framework for contributions to UN Sustainable Development Goals (SDGs) through economic value transfer, household capacity development, local economic stimulus, and long-term health benefits for Indonesia's youth.",
+                "model_1_title": "Value Transfer to Households",
+                "model_1_bullet": "Value transfer = income support to households for children's food needs",
+                "model_2_title": "Return on Investment in Household Assets",
+                "model_2_bullet": "ROI = improved household economic capacity from investment in child nutrition",
+                "model_3_title": "Economic Spillover Impact",
+                "model_3_bullet": "Spillover = increased local economic activity through commodity procurement and distribution",
+                "model_4_title": "Health Improvement",
+                "model_4_bullet": "Provides 30% daily nutrition needs, reducing micronutrient deficiency prevalence",
+                "model_5_title": "Income Improvement",
+                "model_5_bullet": "Increases school attendance and reduces dropout through optimal nutrition",
+
+                // SDG Section
+                "sdg_title": "🌱 Impact on Sustainable Development Goals",
+                "sdg_goal": "GOAL",
+                "sdg_1_title": "No Poverty",
+                "sdg_1_desc": "Income growth through local commodity procurement contracts",
+                "sdg_2_title": "Zero Hunger",
+                "sdg_2_desc": "Daily food and nutrition needs met for children",
+                "sdg_3_title": "Good Health",
+                "sdg_3_desc": "Reduced risk of malnutrition and related diseases",
+                "sdg_4_title": "Quality Education",
+                "sdg_4_desc": "Increased school attendance and learning concentration",
+                "sdg_5_title": "Gender Equality",
+                "sdg_5_desc": "Gender equality in MBG program workforce",
+                "sdg_8_title": "Decent Work",
+                "sdg_8_desc": "Creation of sustainable local employment",
+                "sdg_12_title": "Responsible Production",
+                "sdg_12_desc": "Food waste minimization through logistics management",
+
+                // SROI Analysis
+                "sroi_analysis_title": "📊 Social Return on Investment (SROI) Analysis",
+                "sroi_main": "SOCIAL RETURN ON INVESTMENT: 9x ROI",
+                "sroi_explanation": "For every Rp 1 invested, Rp 9 social economic value is created",
+                "sroi_total_cost": "Total Cost",
+                "sroi_total_benefit": "Total Benefit",
+                "sroi_roi": "Return on Investment",
+                "sroi_net_value": "Net Social Value",
+                "cost_components": "Cost Components",
+                "cost_commodities": "Commodities",
+                "cost_logistics": "Logistics",
+                "cost_management": "Management",
+                "cost_community": "Community",
+                "benefit_components": "Benefit Components",
+                "benefit_transfer": "Value Transfer",
+                "benefit_health": "Health Improvement",
+                "benefit_productivity": "Productivity",
+                "benefit_learning": "Learning Improvement",
+
+                // Economic Model Section
+                "economic_title": "💵 Detailed Economic Model",
+                "economic_subtitle": "In-depth analysis of economic components and contribution to local growth",
+                "economic_subtitle_main": "Economic Benefits Distributed Throughout Value Chain",
+                "commodity_header": "Commodity",
+                "volume_header": "Volume",
+                "value_header": "Value (Rp)",
+                "impact_header": "Impact",
+                "rice_impact": "Primary calorie availability supporter",
+                "protein_impact": "Growth protein source",
+                "veg_impact": "Essential vitamins and minerals",
+                "oil_impact": "Energy and micronutrients",
+                "other_impact": "Nutrition diversification",
+                "total_label": "TOTAL",
+                "total_impact": "Sustainable Social Value",
+
+                // Theory of Change
+                "toc_title": "🎯 Theory of Change",
+                "toc_subtitle": "Change mechanism from program input to long-term impact",
+                "toc_activities": "📋 Activities",
+                "toc_activities_1": "Nutritious food procurement",
+                "toc_activities_2": "School distribution",
+                "toc_activities_3": "Quality monitoring",
+                "toc_outputs": "📦 Outputs",
+                "toc_outputs_1": "76.5 million children receive meals",
+                "toc_outputs_2": "2.09 million jobs created",
+                "toc_outputs_3": "Local business growth",
+                "toc_outcomes": "✅ Outcomes",
+                "toc_outcomes_1": "Child nutrition increased 30%",
+                "toc_outcomes_2": "97.5% attendance",
+                "toc_outcomes_3": "Household income +25%",
+                "toc_impact": "⭐ Impact",
+                "toc_impact_1": "-18% stunting",
+                "toc_impact_2": "Quality human resources",
+                "toc_impact_3": "Sustainable development",
+                "toc_caption": "Impact on UN Sustainable Development Goals",
+
+                // Non-Quantitative Benefits
+                "nonquant_title": "🌟 Non-Quantitative Benefits",
+                "nonquant_subtitle": "Social and behavioral impacts difficult to measure but highly meaningful",
+                "benefit_1_title": "Long-term Health",
+                "benefit_1_desc": "Well-nourished children during critical growth develop optimally with lower chronic disease risk in adulthood",
+                "benefit_2_title": "Academic Performance",
+                "benefit_2_desc": "Improved concentration, stronger memory, and better learning ability lead to higher academic achievement",
+                "benefit_3_title": "Social Cohesion",
+                "benefit_3_desc": "Program strengthens sense of community in schools and society, creating stronger social bonds among children and families",
+                "benefit_4_title": "Nutrition Behavior Change",
+                "benefit_4_desc": "Children and families learn nutrition importance, creating sustainable healthy eating habits",
+                "benefit_5_title": "Community Empowerment",
+                "benefit_5_desc": "Farmers, distributors, and local merchants experience welfare improvement, strengthening grassroots economics and community independence",
+
+                // Footer
+                "footer_about": "About",
+                "footer_about_program": "About Program",
+                "footer_about_impact": "Impact Methodology",
+                "footer_resources": "Resources",
+                "footer_reports": "Full Reports",
+                "footer_data": "Data & Statistics",
+                "footer_contact": "Contact",
+                "footer_email": "📧 Email",
+                "footer_social": "Social Media",
+                "footer_facebook": "👍 Facebook",
+                "footer_instagram": "📸 Instagram",
+                "footer_newsletter": "Newsletter",
+                "footer_newsletter_desc": "Get latest updates on program and impact",
+                "footer_newsletter_btn": "Subscribe",
+                "footer_copyright": "© 2024 School Feeding Program. All rights reserved.",
+
+                // Hero Partners & Stats
+                "hero_partners_label": "Core Partners",
+                "hero_partner_ffi": "FFI",
+                "hero_partner_bgn": "BGN",
+                "hero_partner_wfp": "WFP",
+                "hero_stat_beneficiaries_value": "76.5M",
+                "hero_stat_beneficiaries_label": "Beneficiaries",
+                "hero_stat_jobs_value": "2.09M",
+                "hero_stat_jobs_label": "Jobs Created",
+                "hero_stat_transfer_value": "IDR 18.8T",
+                "hero_stat_transfer_label": "Value Transfer",
+                "hero_stat_sroi_value": "9x",
+                "hero_stat_sroi_label": "SROI",
+
+                // Testimonials Section
+                "testimonials_title": "💬 Voices from Stakeholders",
+                "testimonials_subtitle": "Real impact of school feeding program from various stakeholder perspectives",
+                "testimonial_1_quote": "\"This program has changed my child's life. He is more focused in school and his grades improved. Our family can now allocate funds for other needs.\"",
+                "testimonial_1_name": "Mrs. Siti",
+                "testimonial_1_role": "Parent",
+                "testimonial_2_quote": "\"We see significant improvement in student concentration and academic achievement. Their journey to success becomes easier.\"",
+                "testimonial_2_name": "Mr. Budi, M.Pd",
+                "testimonial_2_role": "School Teacher",
+                "testimonial_3_quote": "\"As a student, getting nutritious meals daily helps me concentrate better on learning. This program really helps a lot!\"",
+                "testimonial_3_name": "Rina",
+                "testimonial_3_role": "Student",
+                "testimonial_4_quote": "\"The demand for commodities in MBG provides a stable market for our products. This helps us develop our business and employ more local workers.\"",
+                "testimonial_4_name": "Mr. Yanto",
+                "testimonial_4_role": "Local Supplier",
+                "testimonial_5_quote": "\"MBG is a smart investment in young generation human resources. Data shows significant long-term improvements in health and productivity for national economy.\"",
+                "testimonial_5_name": "Dr. Hendra",
+                "testimonial_5_role": "Government Official",
+                "testimonial_6_quote": "\"We observe real improvements in health and education outcomes for children in this program. This model deserves to be a regional reference for school nutrition intervention.\"",
+                "testimonial_6_name": "Dr. Maria Chen",
+                "testimonial_6_role": "International Organization",
+
+                // Collaboration Section
+                "collab_title": "🤝 Open Partnerships & Collaboration",
+                "collab_subtitle": "Working with leading institutions to strengthen nutrition and education ecosystem",
+                "collab_1_title": "Nusantara Food Research Lab",
+                "collab_1_desc": "Research laboratory developing optimal nutrition formulas tailored to Indonesian children's nutrition needs",
+                "collab_2_title": "AgriTech Innovation Center",
+                "collab_2_desc": "Agricultural technology innovation center improving commodity production efficiency and school distribution",
+                "collab_3_title": "Future Nutrition Foundation",
+                "collab_3_desc": "Global foundation focused on nutrition education and policy advocacy for children worldwide",
+                "collab_4_title": "Youth Farmers Collective",
+                "collab_4_desc": "Young farmers community providing fresh, high-quality and sustainable products for MBG program",
+                "collab_5_title": "Food Resilience Institute",
+                "collab_5_desc": "Institute developing food security systems and risk mitigation for long-term program sustainability",
+                "collab_6_title": "Sustainable Supply Forum",
+                "collab_6_desc": "Collaborative forum ensuring sustainable, ethical supply chain beneficial to all parties",
+                "collab_badge_research": "🔬 Research",
+                "collab_badge_tech": "⚙️ Technology",
+                "collab_badge_education": "📚 Advocacy",
+                "collab_badge_supply": "🌾 Supply",
+                "collab_badge_resilience": "🛡️ Resilience",
+                "collab_badge_sustainability": "♻️ Sustainability"
+            }
+        };
+
+        let currentLang = 'id';
+
+        function setLanguage(lang) {
+            currentLang = lang;
+            document.documentElement.lang = lang;
+
+            // Update all elements with data-i18n attribute
+            document.querySelectorAll('[data-i18n]').forEach(element => {
+                const key = element.getAttribute('data-i18n');
+                if (translations[lang][key]) {
+                    element.textContent = translations[lang][key];
+                }
+            });
+
+            // Update lang buttons
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            document.querySelector(`[data-lang="${lang}"]`).classList.add('active');
+
+            localStorage.setItem('language', lang);
+        }
+
+        // Language button event listeners
+        document.querySelectorAll('.lang-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                setLanguage(btn.getAttribute('data-lang'));
+            });
+        });
+
+        // Load saved language preference
+        const savedLang = localStorage.getItem('language') || 'id';
+        setLanguage(savedLang);
+    </script>
+
+<script>
+function toggleDarkMode() {
+    const html = document.documentElement;
+    const btn = document.getElementById('dark-mode-btn');
+    const isDark = html.getAttribute('data-theme') === 'dark';
+    if (isDark) {
+        html.removeAttribute('data-theme');
+        if (btn) btn.textContent = '🌙';
+        localStorage.setItem('mbg-theme', 'light');
+    } else {
+        html.setAttribute('data-theme', 'dark');
+        if (btn) btn.textContent = '☀️';
+        localStorage.setItem('mbg-theme', 'dark');
+    }
+}
+function switchLang(lang) {
+    setLanguage(lang);
+}
+(function() {
+    const saved = localStorage.getItem('mbg-theme');
+    if (saved === 'dark') {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        var btn = document.getElementById('dark-mode-btn');
+        if (btn) btn.textContent = '☀️';
+    }
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+{
+  "name": "manfaat-mbg",
+  "version": "1.0.0",
+  "description": "Interactive dashboard for Indonesia's MBG (Makan Bergizi Gratis) program",
+  "main": "index.html",
+  "scripts": {
+    "dev": "http-server -p 3000",
+    "build": "echo 'No build required - static HTML'",
+    "start": "http-server"
+  },
+  "keywords": [
+    "mbg",
+    "nutrition",
+    "indonesia",
+    "dashboard",
+    "free-meals"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logo 38 Provinsi Indonesia</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            color: #333;
+        }
+        .hero {
+            text-align: center;
+            padding: 60px 20px 40px;
+            color: white;
+        }
+        .hero h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 12px;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        }
+        .hero p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .search-bar {
+            max-width: 500px;
+            margin: 30px auto 0;
+            position: relative;
+        }
+        .search-bar input {
+            width: 100%;
+            padding: 14px 20px 14px 48px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1rem;
+            background: rgba(255,255,255,0.95);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+            outline: none;
+            transition: box-shadow 0.3s;
+        }
+        .search-bar input:focus {
+            box-shadow: 0 4px 30px rgba(0,0,0,0.25);
+        }
+        .search-bar svg {
+            position: absolute;
+            left: 16px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 20px;
+            height: 20px;
+            fill: #999;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 30px 20px 60px;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+        }
+        .card {
+            background: white;
+            border-radius: 16px;
+            padding: 24px 16px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+        }
+        .card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+        }
+        .card img {
+            width: 100px;
+            height: 120px;
+            object-fit: contain;
+            margin-bottom: 14px;
+            transition: transform 0.3s;
+        }
+        .card:hover img {
+            transform: scale(1.08);
+        }
+        .card .number {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            font-size: 0.7rem;
+            font-weight: 700;
+            padding: 3px 10px;
+            border-radius: 20px;
+            margin-bottom: 8px;
+        }
+        .card .name {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: #2d3748;
+            line-height: 1.3;
+        }
+        .card.hidden { display: none; }
+        .counter {
+            text-align: center;
+            color: rgba(255,255,255,0.8);
+            margin-bottom: 20px;
+            font-size: 0.95rem;
+        }
+        footer {
+            text-align: center;
+            padding: 30px;
+            color: rgba(255,255,255,0.6);
+            font-size: 0.85rem;
+        }
+        @media (max-width: 600px) {
+            .hero h1 { font-size: 1.8rem; }
+            .grid { grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 12px; }
+            .card { padding: 16px 12px; }
+            .card img { width: 70px; height: 90px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <h1>🇮🇩 Logo 38 Provinsi Indonesia</h1>
+        <p>Koleksi lengkap lambang resmi seluruh provinsi di Indonesia</p>
+        <div class="search-bar">
+            <svg viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27A6.47 6.47 0 0016 9.5 6.5 6.5 0 109.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+            <input type="text" id="search" placeholder="Cari provinsi..." autocomplete="off">
+        </div>
+    </div>
+    <div class="container">
+        <div class="counter" id="counter">Menampilkan 38 dari 38 provinsi</div>
+        <div class="grid" id="grid"></div>
+    </div>
+    <footer>Logo Provinsi Indonesia &copy; 2026</footer>
+
+    <script>
+        const provinces = [
+            { num: 1, name: "Aceh", file: "01-aceh.png" },
+            { num: 2, name: "Sumatera Utara", file: "02-sumatera-utara.png" },
+            { num: 3, name: "Sumatera Barat", file: "03-sumatera-barat.png" },
+            { num: 4, name: "Riau", file: "04-riau.png" },
+            { num: 5, name: "Jambi", file: "05-jambi.png" },
+            { num: 6, name: "Sumatera Selatan", file: "06-sumatera-selatan.png" },
+            { num: 7, name: "Bengkulu", file: "07-bengkulu.png" },
+            { num: 8, name: "Lampung", file: "08-lampung.png" },
+            { num: 9, name: "Kep. Bangka Belitung", file: "09-kepulauan-bangka-belitung.png" },
+            { num: 10, name: "Kepulauan Riau", file: "10-kepulauan-riau.png" },
+            { num: 11, name: "DKI Jakarta", file: "11-dki-jakarta.png" },
+            { num: 12, name: "Jawa Barat", file: "12-jawa-barat.png" },
+            { num: 13, name: "Jawa Tengah", file: "13-jawa-tengah.png" },
+            { num: 14, name: "DI Yogyakarta", file: "14-di-yogyakarta.png" },
+            { num: 15, name: "Jawa Timur", file: "15-jawa-timur.png" },
+            { num: 16, name: "Banten", file: "16-banten.png" },
+            { num: 17, name: "Bali", file: "17-bali.png" },
+            { num: 18, name: "Nusa Tenggara Barat", file: "18-nusa-tenggara-barat.png" },
+            { num: 19, name: "Nusa Tenggara Timur", file: "19-nusa-tenggara-timur.png" },
+            { num: 20, name: "Kalimantan Barat", file: "20-kalimantan-barat.png" },
+            { num: 21, name: "Kalimantan Tengah", file: "21-kalimantan-tengah.png" },
+            { num: 22, name: "Kalimantan Selatan", file: "22-kalimantan-selatan.png" },
+            { num: 23, name: "Kalimantan Timur", file: "23-kalimantan-timur.png" },
+            { num: 24, name: "Kalimantan Utara", file: "24-kalimantan-utara.png" },
+            { num: 25, name: "Sulawesi Utara", file: "25-sulawesi-utara.png" },
+            { num: 26, name: "Sulawesi Tengah", file: "26-sulawesi-tengah.png" },
+            { num: 27, name: "Sulawesi Selatan", file: "27-sulawesi-selatan.png" },
+            { num: 28, name: "Sulawesi Tenggara", file: "28-sulawesi-tenggara.png" },
+            { num: 29, name: "Gorontalo", file: "29-gorontalo.png" },
+            { num: 30, name: "Sulawesi Barat", file: "30-sulawesi-barat.png" },
+            { num: 31, name: "Maluku", file: "31-maluku.png" },
+            { num: 32, name: "Maluku Utara", file: "32-maluku-utara.png" },
+            { num: 33, name: "Papua", file: "33-papua.png" },
+            { num: 34, name: "Papua Barat", file: "34-papua-barat.png" },
+            { num: 35, name: "Papua Tengah", file: "35-papua-tengah.png" },
+            { num: 36, name: "Papua Pegunungan", file: "36-papua-pegunungan.png" },
+            { num: 37, name: "Papua Selatan", file: "37-papua-selatan.png" },
+            { num: 38, name: "Papua Barat Daya", file: "38-papua-barat-daya.png" },
+        ];
+
+        const grid = document.getElementById('grid');
+        const counter = document.getElementById('counter');
+        const search = document.getElementById('search');
+
+        provinces.forEach(p => {
+            const card = document.createElement('div');
+            card.className = 'card';
+            card.dataset.name = p.name.toLowerCase();
+            card.innerHTML = `
+                <img src="images/${p.file}" alt="Logo ${p.name}" loading="lazy">
+                <div class="number">${p.num}</div>
+                <div class="name">${p.name}</div>
+            `;
+            grid.appendChild(card);
+        });
+
+        search.addEventListener('input', () => {
+            const q = search.value.toLowerCase().trim();
+            let shown = 0;
+            document.querySelectorAll('.card').forEach(card => {
+                const match = card.dataset.name.includes(q);
+                card.classList.toggle('hidden', !match);
+                if (match) shown++;
+            });
+            counter.textContent = `Menampilkan ${shown} dari 38 provinsi`;
+        });
+    </script>
+</body>
+</html>
