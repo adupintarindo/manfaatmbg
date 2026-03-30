@@ -5,7 +5,7 @@
   "main": "index.html",
   "scripts": {
     "dev": "http-server -p 3000",
-    "build": "echo 'No build required - static HTML'",
+    "build": "rm -rf public; mkdir -p public && cp index.html dampak.html peta.html sppg_detail.json sppg_markers.json public/ 2>/dev/null; cp -r logos kecamatan logo-kabkota public/ 2>/dev/null; cp -r 'Logo Provinsi Indonesia' public/ 2>/dev/null; echo 'Build complete'",
     "start": "http-server"
   },
   "keywords": [
